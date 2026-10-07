@@ -1,0 +1,79 @@
+[s3-target-http2] building the app image and resetting the stack
+[s3-target-http2] app up: 400/s quarkus HTTP_2, ramp-up 60 s
+[s3-target-http2] ramp-up done, measuring for 600 s
+[s3-target-http2] t=60s completed/s=400.1 open=412 late=0 unexpected=0 cpu app=41.1% wm=32.9% estab=4 tw=0 load=4.43
+[s3-target-http2] t=120s completed/s=399.8 open=441 late=0 unexpected=0 cpu app=44.5% wm=35.1% estab=4 tw=0 load=4.6
+[s3-target-http2] t=180s completed/s=399.8 open=448 late=0 unexpected=0 cpu app=37.2% wm=29.5% estab=4 tw=0 load=2.76
+[s3-target-http2] t=240s completed/s=399.9 open=445 late=0 unexpected=0 cpu app=39.7% wm=29.7% estab=4 tw=0 load=4.0
+[s3-target-http2] t=300s completed/s=400.0 open=425 late=0 unexpected=0 cpu app=39.1% wm=31.7% estab=4 tw=0 load=3.18
+[s3-target-http2] t=360s completed/s=400.0 open=433 late=0 unexpected=0 cpu app=36.2% wm=29.9% estab=4 tw=0 load=4.22
+[s3-target-http2] t=420s completed/s=399.9 open=439 late=0 unexpected=0 cpu app=34.9% wm=24.7% estab=4 tw=0 load=4.73
+[s3-target-http2] t=480s completed/s=400.0 open=440 late=0 unexpected=0 cpu app=36.3% wm=30.0% estab=4 tw=0 load=3.85
+[s3-target-http2] t=540s completed/s=400.0 open=424 late=0 unexpected=0 cpu app=38.6% wm=30.8% estab=4 tw=0 load=3.6
+[s3-target-http2] t=600s completed/s=400.0 open=443 late=0 unexpected=0 cpu app=37.0% wm=30.5% estab=4 tw=0 load=4.96
+{
+  "targetRate": 400.0,
+  "completedPerSecond": 399.96,
+  "startedPerSecond": 400.0,
+  "latencyOkMillis": {
+    "count": 236444,
+    "p50": 148.223,
+    "p95": 5091.327,
+    "p99": 9060.351,
+    "max": 10010.623
+  },
+  "latencyAllMillis": {
+    "count": 240031,
+    "p50": 148.479,
+    "p95": 5496.831,
+    "p99": 9510.911,
+    "max": 30097.407
+  },
+  "openMax": 497,
+  "latePercent": 0.0,
+  "deferred": 0,
+  "unexpectedErrorPercent": 0.0,
+  "unexpectedByOutcome": {},
+  "responsesByHttpVersion": {
+    "HTTP_2": 238845
+  },
+  "poolPendingMax": 0,
+  "injectedPercent": 1.494,
+  "cpuPercentApp": {
+    "avg": 38.4,
+    "max": 68.5
+  },
+  "cpuPercentWiremock": {
+    "avg": 29.5,
+    "max": 45.0
+  },
+  "cpuPercentPostgres": null,
+  "heapUsedMaxMiB": 67.9,
+  "heapFloorSlopeMiBPerMinute": 0.17530428568522136,
+  "establishedConnections": {
+    "avg": 4.0,
+    "max": 4
+  },
+  "timeWait": {
+    "avg": 0.0,
+    "max": 0
+  },
+  "localPortsInUse": {
+    "avg": 4.0,
+    "max": 4
+  },
+  "platformThreadsMax": 31,
+  "gcPauseMaxMillis": 15,
+  "hostLoad1": {
+    "avg": 4.0,
+    "max": 6.22
+  },
+  "verdict": {
+    "completedWithin2Percent": true,
+    "lateBelow0.1Percent": true,
+    "noUnexpectedErrors": true,
+    "heapStable": true,
+    "keepsUp": true
+  }
+}
+[s3-target-http2] written results/s3-target-http2.json

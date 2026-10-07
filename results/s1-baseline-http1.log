@@ -1,0 +1,88 @@
+[s1-baseline-http1] building the app image and resetting the stack
+[s1-baseline-http1] app up: 400/s quarkus HTTP_1_1, ramp-up 60 s
+[s1-baseline-http1] ramp-up done, measuring for 600 s
+[s1-baseline-http1] t=60s completed/s=399.9 open=54 late=0 unexpected=0 cpu app=41.6% wm=30.9% estab=134 tw=0 load=3.52
+[s1-baseline-http1] t=120s completed/s=399.8 open=76 late=0 unexpected=0 cpu app=33.0% wm=24.9% estab=106 tw=37 load=2.42
+[s1-baseline-http1] t=180s completed/s=400.0 open=57 late=0 unexpected=0 cpu app=36.3% wm=27.5% estab=193 tw=0 load=1.73
+[s1-baseline-http1] t=240s completed/s=400.0 open=48 late=0 unexpected=0 cpu app=35.5% wm=27.2% estab=98 tw=95 load=2.47
+[s1-baseline-http1] t=300s completed/s=400.0 open=53 late=0 unexpected=0 cpu app=32.9% wm=25.5% estab=89 tw=9 load=2.92
+[s1-baseline-http1] t=360s completed/s=400.0 open=52 late=0 unexpected=0 cpu app=35.6% wm=30.5% estab=115 tw=4 load=2.83
+[s1-baseline-http1] t=420s completed/s=400.0 open=49 late=0 unexpected=0 cpu app=37.0% wm=26.4% estab=201 tw=0 load=3.07
+[s1-baseline-http1] t=480s completed/s=400.0 open=51 late=0 unexpected=0 cpu app=38.7% wm=30.5% estab=194 tw=7 load=2.96
+[s1-baseline-http1] t=540s completed/s=400.0 open=47 late=0 unexpected=0 cpu app=34.5% wm=26.1% estab=109 tw=85 load=2.34
+[s1-baseline-http1] t=600s completed/s=400.0 open=56 late=0 unexpected=0 cpu app=36.6% wm=27.9% estab=88 tw=21 load=2.68
+{
+  "targetRate": 400.0,
+  "completedPerSecond": 399.99,
+  "startedPerSecond": 400.0,
+  "latencyOkMillis": {
+    "count": 240055,
+    "p50": 128.703,
+    "p95": 197.119,
+    "p99": 205.567,
+    "max": 667.135
+  },
+  "latencyAllMillis": {
+    "count": 240059,
+    "p50": 128.703,
+    "p95": 197.119,
+    "p99": 205.567,
+    "max": 667.135
+  },
+  "openMax": 247,
+  "latePercent": 0.0,
+  "deferred": 0,
+  "unexpectedErrorPercent": 0.0,
+  "unexpectedByOutcome": {},
+  "responsesByHttpVersion": {
+    "HTTP_1_1": 240053
+  },
+  "poolPendingMax": 0,
+  "injectedPercent": 0.0,
+  "cpuPercentApp": {
+    "avg": 37.2,
+    "max": 79.5
+  },
+  "cpuPercentWiremock": {
+    "avg": 27.2,
+    "max": 34.4
+  },
+  "cpuPercentPostgres": null,
+  "heapUsedMaxMiB": 42.8,
+  "heapFloorSlopeMiBPerMinute": 0.02839380900065104,
+  "establishedConnections": {
+    "avg": 130.1,
+    "max": 201
+  },
+  "timeWait": {
+    "avg": 25.7,
+    "max": 99
+  },
+  "localPortsInUse": {
+    "avg": 155.8,
+    "max": 201
+  },
+  "startLagMillis": {
+    "count": 240058,
+    "p50": 0,
+    "p99": 42,
+    "p999": 225,
+    "max": 425
+  },
+  "appThrottledMillisTotal": 138.5,
+  "appThrottledMillisMaxPer5s": 126.4,
+  "platformThreadsMax": 30,
+  "gcPauseMaxMillis": 18,
+  "hostLoad1": {
+    "avg": 2.8,
+    "max": 4.24
+  },
+  "verdict": {
+    "completedWithin2Percent": true,
+    "lateBelow0.1Percent": true,
+    "noUnexpectedErrors": true,
+    "heapStable": true,
+    "keepsUp": true
+  }
+}
+[s1-baseline-http1] written results/s1-baseline-http1.json

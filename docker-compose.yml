@@ -1,0 +1,71 @@
+# All reads go to one address: http://wiremock:8080 inside the compose network.
+name: meter-read-poc
+
+services:
+  wiremock:
+    image: wiremock/wiremock:3.13.2-alpine
+    command:
+      - --port=8080
+      - --container-threads=${WIREMOCK_CONTAINER_THREADS:-400}
+      - --jetty-acceptor-threads=4
+      - --jetty-accept-queue-size=2000
+      - --jetty-idle-timeout=120000
+      - --async-response-enabled=true
+      - --async-response-threads=${WIREMOCK_ASYNC_THREADS:-64}
+      - --no-request-journal
+      - --disable-request-logging
+      - --local-response-templating
+      - --max-template-cache-entries=1000
+    environment:
+      JAVA_OPTS: "-Xms1536m -Xmx1536m -XX:+UseG1GC"
+    volumes:
+      - ./wiremock/${WIREMOCK_PROFILE:-profile-full}/mappings:/home/wiremock/mappings:ro
+      - ./wiremock/files:/home/wiremock/__files:ro
+    ports:
+      - "127.0.0.1:18081:8080"
+    cpus: ${WIREMOCK_CPUS:-4}
+    mem_limit: 2g
+
+  postgres:
+    image: postgres:18.6
+    profiles: ["db"]
+    environment:
+      POSTGRES_DB: poc
+      POSTGRES_USER: poc
+      POSTGRES_PASSWORD: poc
+    command:
+      - postgres
+      - -c
+      - shared_buffers=512MB
+      - -c
+      - max_connections=100
+    ports:
+      - "127.0.0.1:15432:5432"
+    cpus: 2
+    mem_limit: 2g
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "poc", "-d", "poc"]
+      interval: 2s
+      retries: 30
+
+  app:
+    build: .
+    image: meter-read-poc-app:latest
+    environment:
+      POC_METER_COUNT: ${POC_METER_COUNT:-360000}
+      POC_RATE_LIMIT: ${POC_RATE_LIMIT:-400}
+      POC_RAMP_UP_SECONDS: ${POC_RAMP_UP_SECONDS:-60}
+      POC_CLIENT: ${POC_CLIENT:-quarkus}
+      POC_HTTP_VERSION: ${POC_HTTP_VERSION:-HTTP_1_1}
+      POC_HTTP2_MAX_CONNECTIONS: ${POC_HTTP2_MAX_CONNECTIONS:-64}
+      POC_MAX_CONNECTIONS: ${POC_MAX_CONNECTIONS:-4000}
+      POC_TARGET_URL: http://wiremock:8080
+      POC_DB_ENABLED: ${POC_DB_ENABLED:-false}
+      POC_TIMEOUT_SECONDS: ${POC_TIMEOUT_SECONDS:-30}
+      POC_SCHEDULER_ENABLED: ${POC_SCHEDULER_ENABLED:-true}
+    ports:
+      - "127.0.0.1:18080:8080"
+    cpus: 2
+    mem_limit: 2g
+    depends_on:
+      - wiremock

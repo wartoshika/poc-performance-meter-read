@@ -1,0 +1,620 @@
+[s1-baseline-http1] building the app image and resetting the stack
+[s1-baseline-http1] app up: 400/s quarkus HTTP_1_1, ramp-up 60 s
+[s1-baseline-http1] ramp-up done, measuring for 600 s
+[s1-baseline-http1] t=60s completed/s=399.9 open=54 late=0 unexpected=0 cpu app=41.6% wm=30.9% estab=134 tw=0 load=3.52
+[s1-baseline-http1] t=120s completed/s=399.8 open=76 late=0 unexpected=0 cpu app=33.0% wm=24.9% estab=106 tw=37 load=2.42
+[s1-baseline-http1] t=180s completed/s=400.0 open=57 late=0 unexpected=0 cpu app=36.3% wm=27.5% estab=193 tw=0 load=1.73
+[s1-baseline-http1] t=240s completed/s=400.0 open=48 late=0 unexpected=0 cpu app=35.5% wm=27.2% estab=98 tw=95 load=2.47
+[s1-baseline-http1] t=300s completed/s=400.0 open=53 late=0 unexpected=0 cpu app=32.9% wm=25.5% estab=89 tw=9 load=2.92
+[s1-baseline-http1] t=360s completed/s=400.0 open=52 late=0 unexpected=0 cpu app=35.6% wm=30.5% estab=115 tw=4 load=2.83
+[s1-baseline-http1] t=420s completed/s=400.0 open=49 late=0 unexpected=0 cpu app=37.0% wm=26.4% estab=201 tw=0 load=3.07
+[s1-baseline-http1] t=480s completed/s=400.0 open=51 late=0 unexpected=0 cpu app=38.7% wm=30.5% estab=194 tw=7 load=2.96
+[s1-baseline-http1] t=540s completed/s=400.0 open=47 late=0 unexpected=0 cpu app=34.5% wm=26.1% estab=109 tw=85 load=2.34
+[s1-baseline-http1] t=600s completed/s=400.0 open=56 late=0 unexpected=0 cpu app=36.6% wm=27.9% estab=88 tw=21 load=2.68
+{
+  "targetRate": 400.0,
+  "completedPerSecond": 399.99,
+  "startedPerSecond": 400.0,
+  "latencyOkMillis": {
+    "count": 240055,
+    "p50": 128.703,
+    "p95": 197.119,
+    "p99": 205.567,
+    "max": 667.135
+  },
+  "latencyAllMillis": {
+    "count": 240059,
+    "p50": 128.703,
+    "p95": 197.119,
+    "p99": 205.567,
+    "max": 667.135
+  },
+  "openMax": 247,
+  "latePercent": 0.0,
+  "deferred": 0,
+  "unexpectedErrorPercent": 0.0,
+  "unexpectedByOutcome": {},
+  "responsesByHttpVersion": {
+    "HTTP_1_1": 240053
+  },
+  "poolPendingMax": 0,
+  "injectedPercent": 0.0,
+  "cpuPercentApp": {
+    "avg": 37.2,
+    "max": 79.5
+  },
+  "cpuPercentWiremock": {
+    "avg": 27.2,
+    "max": 34.4
+  },
+  "cpuPercentPostgres": null,
+  "heapUsedMaxMiB": 42.8,
+  "heapFloorSlopeMiBPerMinute": 0.02839380900065104,
+  "establishedConnections": {
+    "avg": 130.1,
+    "max": 201
+  },
+  "timeWait": {
+    "avg": 25.7,
+    "max": 99
+  },
+  "localPortsInUse": {
+    "avg": 155.8,
+    "max": 201
+  },
+  "startLagMillis": {
+    "count": 240058,
+    "p50": 0,
+    "p99": 42,
+    "p999": 225,
+    "max": 425
+  },
+  "appThrottledMillisTotal": 138.5,
+  "appThrottledMillisMaxPer5s": 126.4,
+  "platformThreadsMax": 30,
+  "gcPauseMaxMillis": 18,
+  "hostLoad1": {
+    "avg": 2.8,
+    "max": 4.24
+  },
+  "verdict": {
+    "completedWithin2Percent": true,
+    "lateBelow0.1Percent": true,
+    "noUnexpectedErrors": true,
+    "heapStable": true,
+    "keepsUp": true
+  }
+}
+[s1-baseline-http1] written results/s1-baseline-http1.json
+[s2-target-http1] building the app image and resetting the stack
+[s2-target-http1] app up: 400/s quarkus HTTP_1_1, ramp-up 60 s
+[s2-target-http1] ramp-up done, measuring for 600 s
+[s2-target-http1] t=60s completed/s=399.8 open=435 late=0 unexpected=0 cpu app=35.4% wm=29.5% estab=486 tw=0 load=5.98
+[s2-target-http1] t=120s completed/s=399.9 open=429 late=0 unexpected=0 cpu app=35.7% wm=26.9% estab=449 tw=0 load=4.3
+[s2-target-http1] t=180s completed/s=400.0 open=421 late=0 unexpected=0 cpu app=35.5% wm=27.4% estab=441 tw=0 load=3.41
+[s2-target-http1] t=240s completed/s=400.0 open=425 late=0 unexpected=0 cpu app=31.8% wm=25.2% estab=437 tw=0 load=4.96
+[s2-target-http1] t=300s completed/s=400.0 open=426 late=0 unexpected=0 cpu app=32.4% wm=25.0% estab=448 tw=0 load=4.51
+[s2-target-http1] t=360s completed/s=399.9 open=448 late=0 unexpected=0 cpu app=34.6% wm=29.1% estab=455 tw=0 load=4.05
+[s2-target-http1] t=420s completed/s=400.0 open=427 late=0 unexpected=0 cpu app=38.0% wm=28.5% estab=447 tw=0 load=2.92
+[s2-target-http1] t=480s completed/s=400.0 open=427 late=0 unexpected=0 cpu app=32.4% wm=25.9% estab=446 tw=0 load=2.69
+[s2-target-http1] t=540s completed/s=400.0 open=436 late=0 unexpected=0 cpu app=35.9% wm=29.9% estab=450 tw=0 load=2.22
+[s2-target-http1] t=600s completed/s=400.0 open=431 late=0 unexpected=0 cpu app=38.3% wm=31.8% estab=443 tw=0 load=2.98
+{
+  "targetRate": 400.0,
+  "completedPerSecond": 399.99,
+  "startedPerSecond": 400.0,
+  "latencyOkMillis": {
+    "count": 236466,
+    "p50": 147.583,
+    "p95": 5074.943,
+    "p99": 9027.583,
+    "max": 10059.775
+  },
+  "latencyAllMillis": {
+    "count": 240060,
+    "p50": 147.839,
+    "p95": 5488.639,
+    "p99": 9510.911,
+    "max": 30064.639
+  },
+  "openMax": 574,
+  "latePercent": 0.0,
+  "deferred": 0,
+  "unexpectedErrorPercent": 0.0,
+  "unexpectedByOutcome": {},
+  "responsesByHttpVersion": {
+    "HTTP_1_1": 238861
+  },
+  "poolPendingMax": 0,
+  "injectedPercent": 1.496,
+  "cpuPercentApp": {
+    "avg": 35.8,
+    "max": 61.1
+  },
+  "cpuPercentWiremock": {
+    "avg": 27.8,
+    "max": 35.3
+  },
+  "cpuPercentPostgres": null,
+  "heapUsedMaxMiB": 70.6,
+  "heapFloorSlopeMiBPerMinute": 0.0016773223876953125,
+  "establishedConnections": {
+    "avg": 453.0,
+    "max": 529
+  },
+  "timeWait": {
+    "avg": 0.0,
+    "max": 0
+  },
+  "localPortsInUse": {
+    "avg": 482.7,
+    "max": 552
+  },
+  "startLagMillis": {
+    "count": 240064,
+    "p50": 0,
+    "p99": 27,
+    "p999": 84,
+    "max": 315
+  },
+  "appThrottledMillisTotal": 38.1,
+  "appThrottledMillisMaxPer5s": 22.2,
+  "platformThreadsMax": 29,
+  "gcPauseMaxMillis": 36,
+  "hostLoad1": {
+    "avg": 4.1,
+    "max": 6.94
+  },
+  "verdict": {
+    "completedWithin2Percent": true,
+    "lateBelow0.1Percent": true,
+    "noUnexpectedErrors": true,
+    "heapStable": true,
+    "keepsUp": true
+  }
+}
+[s2-target-http1] written results/s2-target-http1.json
+[s3-target-http2] building the app image and resetting the stack
+[s3-target-http2] app up: 400/s quarkus HTTP_2, ramp-up 60 s
+[s3-target-http2] ramp-up done, measuring for 600 s
+[s3-target-http2] t=60s completed/s=399.8 open=422 late=0 unexpected=0 cpu app=37.7% wm=32.3% estab=4 tw=0 load=4.66
+[s3-target-http2] t=120s completed/s=399.8 open=433 late=0 unexpected=0 cpu app=41.7% wm=32.5% estab=4 tw=0 load=4.06
+[s3-target-http2] t=180s completed/s=399.9 open=430 late=0 unexpected=0 cpu app=39.4% wm=32.3% estab=4 tw=0 load=3.87
+[s3-target-http2] t=240s completed/s=399.9 open=429 late=0 unexpected=0 cpu app=36.5% wm=28.0% estab=4 tw=0 load=4.1
+[s3-target-http2] t=300s completed/s=400.0 open=405 late=0 unexpected=0 cpu app=38.9% wm=32.2% estab=4 tw=0 load=2.72
+[s3-target-http2] t=360s completed/s=399.9 open=426 late=0 unexpected=0 cpu app=38.5% wm=31.5% estab=4 tw=0 load=3.34
+[s3-target-http2] t=420s completed/s=399.9 open=438 late=0 unexpected=0 cpu app=40.7% wm=30.4% estab=4 tw=0 load=4.32
+[s3-target-http2] t=480s completed/s=400.0 open=413 late=0 unexpected=0 cpu app=38.9% wm=32.0% estab=4 tw=0 load=3.01
+[s3-target-http2] t=540s completed/s=400.0 open=432 late=0 unexpected=0 cpu app=39.0% wm=35.2% estab=4 tw=0 load=2.4
+[s3-target-http2] t=600s completed/s=400.0 open=435 late=0 unexpected=0 cpu app=35.8% wm=30.8% estab=4 tw=0 load=3.28
+{
+  "targetRate": 400.0,
+  "completedPerSecond": 399.95,
+  "startedPerSecond": 400.0,
+  "latencyOkMillis": {
+    "count": 236453,
+    "p50": 148.223,
+    "p95": 5083.135,
+    "p99": 8994.815,
+    "max": 10067.967
+  },
+  "latencyAllMillis": {
+    "count": 240046,
+    "p50": 148.351,
+    "p95": 5513.215,
+    "p99": 9494.527,
+    "max": 30064.639
+  },
+  "openMax": 502,
+  "latePercent": 0.0,
+  "deferred": 0,
+  "unexpectedErrorPercent": 0.0,
+  "unexpectedByOutcome": {},
+  "responsesByHttpVersion": {
+    "HTTP_2": 238851
+  },
+  "poolPendingMax": 0,
+  "injectedPercent": 1.496,
+  "cpuPercentApp": {
+    "avg": 39.4,
+    "max": 87.3
+  },
+  "cpuPercentWiremock": {
+    "avg": 31.2,
+    "max": 41.6
+  },
+  "cpuPercentPostgres": null,
+  "heapUsedMaxMiB": 66.0,
+  "heapFloorSlopeMiBPerMinute": 0.1058947245279948,
+  "establishedConnections": {
+    "avg": 4.0,
+    "max": 4
+  },
+  "timeWait": {
+    "avg": 0.0,
+    "max": 0
+  },
+  "localPortsInUse": {
+    "avg": 4.0,
+    "max": 4
+  },
+  "startLagMillis": {
+    "count": 240072,
+    "p50": 0,
+    "p99": 20,
+    "p999": 61,
+    "max": 162
+  },
+  "appThrottledMillisTotal": 160.0,
+  "appThrottledMillisMaxPer5s": 57.3,
+  "platformThreadsMax": 29,
+  "gcPauseMaxMillis": 20,
+  "hostLoad1": {
+    "avg": 3.5,
+    "max": 5.62
+  },
+  "verdict": {
+    "completedWithin2Percent": true,
+    "lateBelow0.1Percent": true,
+    "noUnexpectedErrors": true,
+    "heapStable": true,
+    "keepsUp": true
+  }
+}
+[s3-target-http2] written results/s3-target-http2.json
+[s4-stress-600] building the app image and resetting the stack
+[s4-stress-600] app up: 600/s quarkus HTTP_2, ramp-up 60 s
+[s4-stress-600] ramp-up done, measuring for 600 s
+[s4-stress-600] t=60s completed/s=599.0 open=648 late=0 unexpected=0 cpu app=51.0% wm=59.2% estab=11 tw=0 load=3.9
+[s4-stress-600] t=120s completed/s=599.5 open=649 late=0 unexpected=0 cpu app=52.3% wm=60.9% estab=6 tw=0 load=3.53
+[s4-stress-600] t=180s completed/s=599.6 open=654 late=0 unexpected=0 cpu app=53.9% wm=45.0% estab=6 tw=0 load=4.98
+[s4-stress-600] t=240s completed/s=599.7 open=654 late=0 unexpected=0 cpu app=45.8% wm=41.2% estab=6 tw=0 load=4.55
+[s4-stress-600] t=300s completed/s=599.8 open=658 late=0 unexpected=0 cpu app=47.4% wm=43.3% estab=20 tw=0 load=6.5
+[s4-stress-600] t=360s completed/s=599.8 open=642 late=0 unexpected=0 cpu app=47.7% wm=43.6% estab=6 tw=9 load=8.04
+[s4-stress-600] t=420s completed/s=599.9 open=649 late=0 unexpected=0 cpu app=56.2% wm=46.2% estab=16 tw=0 load=4.97
+[s4-stress-600] t=480s completed/s=599.9 open=626 late=0 unexpected=0 cpu app=52.2% wm=44.3% estab=8 tw=8 load=3.61
+[s4-stress-600] t=540s completed/s=599.9 open=648 late=0 unexpected=0 cpu app=49.1% wm=41.3% estab=6 tw=0 load=4.74
+[s4-stress-600] t=600s completed/s=599.9 open=651 late=0 unexpected=0 cpu app=47.3% wm=52.1% estab=6 tw=0 load=3.55
+{
+  "targetRate": 600.0,
+  "completedPerSecond": 599.89,
+  "startedPerSecond": 600.0,
+  "latencyOkMillis": {
+    "count": 354638,
+    "p50": 149.119,
+    "p95": 5070.847,
+    "p99": 9027.583,
+    "max": 10493.951
+  },
+  "latencyAllMillis": {
+    "count": 360028,
+    "p50": 149.375,
+    "p95": 5496.831,
+    "p99": 9486.335,
+    "max": 30474.239
+  },
+  "openMax": 1056,
+  "latePercent": 0.0,
+  "deferred": 0,
+  "unexpectedErrorPercent": 0.0,
+  "unexpectedByOutcome": {},
+  "responsesByHttpVersion": {
+    "HTTP_2": 358237
+  },
+  "poolPendingMax": 0,
+  "injectedPercent": 1.496,
+  "cpuPercentApp": {
+    "avg": 51.1,
+    "max": 81.6
+  },
+  "cpuPercentWiremock": {
+    "avg": 43.8,
+    "max": 60.9
+  },
+  "cpuPercentPostgres": null,
+  "heapUsedMaxMiB": 97.5,
+  "heapFloorSlopeMiBPerMinute": 0.4691593170166016,
+  "establishedConnections": {
+    "avg": 9.2,
+    "max": 20
+  },
+  "timeWait": {
+    "avg": 1.7,
+    "max": 9
+  },
+  "localPortsInUse": {
+    "avg": 11.0,
+    "max": 20
+  },
+  "startLagMillis": {
+    "count": 360093,
+    "p50": 0,
+    "p99": 87,
+    "p999": 340,
+    "max": 664
+  },
+  "appThrottledMillisTotal": 45.2,
+  "appThrottledMillisMaxPer5s": 44.3,
+  "platformThreadsMax": 33,
+  "gcPauseMaxMillis": 20,
+  "hostLoad1": {
+    "avg": 5.0,
+    "max": 8.04
+  },
+  "verdict": {
+    "completedWithin2Percent": true,
+    "lateBelow0.1Percent": true,
+    "noUnexpectedErrors": true,
+    "heapStable": true,
+    "keepsUp": true
+  }
+}
+[s4-stress-600] written results/s4-stress-600.json
+[s4-stress-800] building the app image and resetting the stack
+[s4-stress-800] app up: 800/s quarkus HTTP_2, ramp-up 60 s
+[s4-stress-800] ramp-up done, measuring for 600 s
+[s4-stress-800] t=60s completed/s=799.5 open=858 late=0 unexpected=0 cpu app=59.1% wm=55.6% estab=9 tw=3 load=6.71
+[s4-stress-800] t=120s completed/s=799.7 open=864 late=0 unexpected=0 cpu app=67.7% wm=61.7% estab=8 tw=0 load=5.69
+[s4-stress-800] t=180s completed/s=799.6 open=897 late=0 unexpected=0 cpu app=70.1% wm=65.5% estab=8 tw=0 load=4.13
+[s4-stress-800] t=240s completed/s=799.8 open=864 late=0 unexpected=0 cpu app=64.5% wm=56.8% estab=8 tw=0 load=3.92
+[s4-stress-800] t=300s completed/s=799.8 open=882 late=0 unexpected=0 cpu app=69.8% wm=75.7% estab=8 tw=0 load=3.36
+[s4-stress-800] t=360s completed/s=799.9 open=874 late=0 unexpected=0 cpu app=58.2% wm=53.5% estab=8 tw=0 load=9.68
+[s4-stress-800] t=420s completed/s=799.9 open=861 late=0 unexpected=0 cpu app=66.2% wm=55.7% estab=21 tw=0 load=6.22
+[s4-stress-800] t=480s completed/s=799.9 open=878 late=0 unexpected=0 cpu app=63.5% wm=57.2% estab=9 tw=7 load=4.45
+[s4-stress-800] t=540s completed/s=800.0 open=852 late=0 unexpected=0 cpu app=58.4% wm=54.5% estab=8 tw=1 load=5.69
+[s4-stress-800] t=600s completed/s=799.9 open=864 late=0 unexpected=0 cpu app=57.6% wm=52.5% estab=8 tw=0 load=4.32
+{
+  "targetRate": 800.0,
+  "completedPerSecond": 799.93,
+  "startedPerSecond": 800.0,
+  "latencyOkMillis": {
+    "count": 472892,
+    "p50": 149.247,
+    "p95": 5091.327,
+    "p99": 9019.391,
+    "max": 10321.919
+  },
+  "latencyAllMillis": {
+    "count": 480062,
+    "p50": 149.375,
+    "p95": 5492.735,
+    "p99": 9502.719,
+    "max": 30375.935
+  },
+  "openMax": 1247,
+  "latePercent": 0.0,
+  "deferred": 0,
+  "unexpectedErrorPercent": 0.0,
+  "unexpectedByOutcome": {},
+  "responsesByHttpVersion": {
+    "HTTP_2": 477691
+  },
+  "poolPendingMax": 0,
+  "injectedPercent": 1.494,
+  "cpuPercentApp": {
+    "avg": 63.9,
+    "max": 85.0
+  },
+  "cpuPercentWiremock": {
+    "avg": 57.4,
+    "max": 76.5
+  },
+  "cpuPercentPostgres": null,
+  "heapUsedMaxMiB": 125.6,
+  "heapFloorSlopeMiBPerMinute": -0.12802200317382811,
+  "establishedConnections": {
+    "avg": 9.8,
+    "max": 21
+  },
+  "timeWait": {
+    "avg": 1.1,
+    "max": 7
+  },
+  "localPortsInUse": {
+    "avg": 10.9,
+    "max": 21
+  },
+  "startLagMillis": {
+    "count": 480104,
+    "p50": 0,
+    "p99": 80,
+    "p999": 268,
+    "max": 472
+  },
+  "appThrottledMillisTotal": 334.5,
+  "appThrottledMillisMaxPer5s": 94.0,
+  "platformThreadsMax": 33,
+  "gcPauseMaxMillis": 56,
+  "hostLoad1": {
+    "avg": 5.3,
+    "max": 10.58
+  },
+  "verdict": {
+    "completedWithin2Percent": true,
+    "lateBelow0.1Percent": true,
+    "noUnexpectedErrors": true,
+    "heapStable": true,
+    "keepsUp": true
+  }
+}
+[s4-stress-800] written results/s4-stress-800.json
+[s4-stress-1000] building the app image and resetting the stack
+[s4-stress-1000] app up: 1000/s quarkus HTTP_2, ramp-up 60 s
+[s4-stress-1000] ramp-up done, measuring for 600 s
+[s4-stress-1000] t=60s completed/s=999.2 open=1085 late=0 unexpected=0 cpu app=74.6% wm=102.5% estab=64 tw=0 load=7.48
+[s4-stress-1000] t=120s completed/s=999.6 open=1084 late=0 unexpected=0 cpu app=69.5% wm=63.1% estab=11 tw=40 load=8.95
+[s4-stress-1000] t=180s completed/s=999.7 open=1087 late=0 unexpected=0 cpu app=78.0% wm=73.2% estab=11 tw=0 load=4.43
+[s4-stress-1000] t=240s completed/s=999.8 open=1096 late=0 unexpected=0 cpu app=78.3% wm=74.2% estab=10 tw=1 load=4.86
+[s4-stress-1000] t=300s completed/s=999.7 open=1124 late=0 unexpected=0 cpu app=71.0% wm=65.0% estab=17 tw=0 load=5.08
+[s4-stress-1000] t=360s completed/s=999.9 open=1080 late=0 unexpected=0 cpu app=74.2% wm=70.9% estab=64 tw=5 load=4.56
+[s4-stress-1000] t=420s completed/s=999.9 open=1070 late=0 unexpected=0 cpu app=75.3% wm=67.6% estab=10 tw=42 load=5.55
+[s4-stress-1000] t=480s completed/s=999.9 open=1074 late=0 unexpected=0 cpu app=74.9% wm=72.3% estab=10 tw=0 load=4.64
+[s4-stress-1000] t=540s completed/s=999.9 open=1081 late=0 unexpected=0 cpu app=74.4% wm=69.7% estab=10 tw=0 load=4.39
+[s4-stress-1000] t=600s completed/s=1000.0 open=1063 late=0 unexpected=0 cpu app=74.7% wm=68.1% estab=10 tw=0 load=3.51
+{
+  "targetRate": 1000.0,
+  "completedPerSecond": 999.97,
+  "startedPerSecond": 1000.0,
+  "latencyOkMillis": {
+    "count": 591186,
+    "p50": 149.375,
+    "p95": 5087.231,
+    "p99": 9027.583,
+    "max": 10436.607
+  },
+  "latencyAllMillis": {
+    "count": 600143,
+    "p50": 149.631,
+    "p95": 5509.119,
+    "p99": 9510.911,
+    "max": 30507.007
+  },
+  "openMax": 1744,
+  "latePercent": 0.0,
+  "deferred": 0,
+  "unexpectedErrorPercent": 0.0,
+  "unexpectedByOutcome": {},
+  "responsesByHttpVersion": {
+    "HTTP_2": 597179
+  },
+  "poolPendingMax": 0,
+  "injectedPercent": 1.492,
+  "cpuPercentApp": {
+    "avg": 76.8,
+    "max": 118.0
+  },
+  "cpuPercentWiremock": {
+    "avg": 70.4,
+    "max": 117.1
+  },
+  "cpuPercentPostgres": null,
+  "heapUsedMaxMiB": 149.5,
+  "heapFloorSlopeMiBPerMinute": 0.08643468221028645,
+  "establishedConnections": {
+    "avg": 22.0,
+    "max": 64
+  },
+  "timeWait": {
+    "avg": 9.2,
+    "max": 42
+  },
+  "localPortsInUse": {
+    "avg": 31.2,
+    "max": 69
+  },
+  "startLagMillis": {
+    "count": 600161,
+    "p50": 0,
+    "p99": 76,
+    "p999": 333,
+    "max": 614
+  },
+  "appThrottledMillisTotal": 1781.1,
+  "appThrottledMillisMaxPer5s": 378.2,
+  "platformThreadsMax": 36,
+  "gcPauseMaxMillis": 57,
+  "hostLoad1": {
+    "avg": 5.3,
+    "max": 9.47
+  },
+  "verdict": {
+    "completedWithin2Percent": true,
+    "lateBelow0.1Percent": true,
+    "noUnexpectedErrors": true,
+    "heapStable": true,
+    "keepsUp": true
+  }
+}
+[s4-stress-1000] written results/s4-stress-1000.json
+[s5-db-HTTP_2] building the app image and resetting the stack
+[s5-db-HTTP_2] app up: 400/s quarkus HTTP_2, ramp-up 60 s
+[s5-db-HTTP_2] ramp-up done, measuring for 600 s
+[s5-db-HTTP_2] t=60s completed/s=399.7 open=434 late=0 unexpected=0 cpu app=63.0% wm=39.1% estab=4 tw=0 load=5.01
+[s5-db-HTTP_2] t=120s completed/s=399.9 open=435 late=0 unexpected=0 cpu app=44.3% wm=31.2% estab=64 tw=0 load=5.29
+[s5-db-HTTP_2] t=180s completed/s=399.9 open=429 late=0 unexpected=0 cpu app=52.4% wm=38.9% estab=5 tw=48 load=3.21
+[s5-db-HTTP_2] t=240s completed/s=399.9 open=441 late=0 unexpected=0 cpu app=54.8% wm=41.7% estab=64 tw=0 load=4.24
+[s5-db-HTTP_2] t=300s completed/s=399.9 open=433 late=0 unexpected=0 cpu app=51.4% wm=35.5% estab=7 tw=52 load=4.82
+[s5-db-HTTP_2] t=360s completed/s=400.0 open=428 late=0 unexpected=0 cpu app=43.0% wm=29.4% estab=4 tw=3 load=4.6
+[s5-db-HTTP_2] t=420s completed/s=400.0 open=436 late=0 unexpected=0 cpu app=52.2% wm=32.7% estab=4 tw=0 load=3.66
+[s5-db-HTTP_2] t=480s completed/s=400.0 open=427 late=0 unexpected=0 cpu app=46.3% wm=29.4% estab=4 tw=0 load=3.0
+[s5-db-HTTP_2] t=540s completed/s=400.0 open=429 late=0 unexpected=0 cpu app=47.6% wm=32.8% estab=4 tw=0 load=6.42
+[s5-db-HTTP_2] t=600s completed/s=400.0 open=439 late=0 unexpected=0 cpu app=41.8% wm=30.3% estab=4 tw=0 load=4.04
+{
+  "targetRate": 400.0,
+  "completedPerSecond": 399.96,
+  "startedPerSecond": 400.0,
+  "latencyOkMillis": {
+    "count": 236446,
+    "p50": 148.863,
+    "p95": 5083.135,
+    "p99": 9011.199,
+    "max": 10371.071
+  },
+  "latencyAllMillis": {
+    "count": 240039,
+    "p50": 149.119,
+    "p95": 5500.927,
+    "p99": 9494.527,
+    "max": 30228.479
+  },
+  "openMax": 739,
+  "latePercent": 0.0,
+  "deferred": 0,
+  "unexpectedErrorPercent": 0.0,
+  "unexpectedByOutcome": {},
+  "responsesByHttpVersion": {
+    "HTTP_2": 238847
+  },
+  "poolPendingMax": 0,
+  "injectedPercent": 1.495,
+  "cpuPercentApp": {
+    "avg": 47.8,
+    "max": 110.0
+  },
+  "cpuPercentWiremock": {
+    "avg": 32.9,
+    "max": 44.1
+  },
+  "cpuPercentPostgres": {
+    "avg": 17.5,
+    "max": 25.1
+  },
+  "heapUsedMaxMiB": 78.9,
+  "heapFloorSlopeMiBPerMinute": -0.05413831075032552,
+  "establishedConnections": {
+    "avg": 16.7,
+    "max": 64
+  },
+  "timeWait": {
+    "avg": 10.5,
+    "max": 54
+  },
+  "localPortsInUse": {
+    "avg": 27.3,
+    "max": 64
+  },
+  "startLagMillis": {
+    "count": 240062,
+    "p50": 0,
+    "p99": 37,
+    "p999": 339,
+    "max": 736
+  },
+  "appThrottledMillisTotal": 319.5,
+  "appThrottledMillisMaxPer5s": 174.4,
+  "platformThreadsMax": 33,
+  "gcPauseMaxMillis": 26,
+  "hostLoad1": {
+    "avg": 4.5,
+    "max": 6.89
+  },
+  "verdict": {
+    "completedWithin2Percent": true,
+    "lateBelow0.1Percent": true,
+    "noUnexpectedErrors": true,
+    "heapStable": true,
+    "keepsUp": true
+  }
+}
+[s5-db-HTTP_2] written results/s5-db-HTTP_2.json
+exit=0

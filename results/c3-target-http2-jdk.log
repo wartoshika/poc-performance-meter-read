@@ -1,0 +1,88 @@
+[c3-target-http2-jdk] building the app image and resetting the stack
+[c3-target-http2-jdk] app up: 400/s jdk HTTP_2, ramp-up 60 s
+[c3-target-http2-jdk] ramp-up done, measuring for 600 s
+[c3-target-http2-jdk] t=60s completed/s=399.6 open=422 late=0 unexpected=0 cpu app=29.2% wm=29.9% estab=495 tw=0 load=3.55
+[c3-target-http2-jdk] t=120s completed/s=399.7 open=433 late=0 unexpected=0 cpu app=30.7% wm=29.1% estab=479 tw=0 load=3.88
+[c3-target-http2-jdk] t=180s completed/s=399.8 open=440 late=0 unexpected=0 cpu app=27.0% wm=27.4% estab=472 tw=0 load=4.1
+[c3-target-http2-jdk] t=240s completed/s=399.9 open=431 late=0 unexpected=0 cpu app=32.8% wm=37.2% estab=450 tw=0 load=3.06
+[c3-target-http2-jdk] t=300s completed/s=399.9 open=432 late=0 unexpected=0 cpu app=26.3% wm=28.0% estab=534 tw=0 load=3.43
+[c3-target-http2-jdk] t=360s completed/s=399.9 open=426 late=0 unexpected=0 cpu app=29.2% wm=28.9% estab=454 tw=0 load=2.1
+[c3-target-http2-jdk] t=420s completed/s=400.0 open=421 late=0 unexpected=0 cpu app=29.8% wm=27.5% estab=494 tw=0 load=1.98
+[c3-target-http2-jdk] t=480s completed/s=400.0 open=422 late=0 unexpected=0 cpu app=33.0% wm=34.4% estab=448 tw=0 load=3.74
+[c3-target-http2-jdk] t=540s completed/s=399.9 open=435 late=0 unexpected=0 cpu app=27.7% wm=26.6% estab=442 tw=0 load=4.3
+[c3-target-http2-jdk] t=600s completed/s=399.9 open=438 late=0 unexpected=0 cpu app=28.1% wm=28.1% estab=480 tw=0 load=4.04
+{
+  "targetRate": 400.0,
+  "completedPerSecond": 399.96,
+  "startedPerSecond": 400.0,
+  "latencyOkMillis": {
+    "count": 236448,
+    "p50": 148.095,
+    "p95": 5079.039,
+    "p99": 8986.623,
+    "max": 10092.543
+  },
+  "latencyAllMillis": {
+    "count": 240038,
+    "p50": 148.351,
+    "p95": 5492.735,
+    "p99": 9469.951,
+    "max": 30326.783
+  },
+  "openMax": 630,
+  "latePercent": 0.0,
+  "deferred": 0,
+  "unexpectedErrorPercent": 0.0,
+  "unexpectedByOutcome": {},
+  "responsesByHttpVersion": {
+    "HTTP_1_1": 238845
+  },
+  "poolPendingMax": 0,
+  "injectedPercent": 1.494,
+  "cpuPercentApp": {
+    "avg": 30.4,
+    "max": 58.8
+  },
+  "cpuPercentWiremock": {
+    "avg": 29.3,
+    "max": 42.8
+  },
+  "cpuPercentPostgres": null,
+  "heapUsedMaxMiB": 129.0,
+  "heapFloorSlopeMiBPerMinute": 0.41890640258789064,
+  "establishedConnections": {
+    "avg": 491.0,
+    "max": 615
+  },
+  "timeWait": {
+    "avg": 0.0,
+    "max": 0
+  },
+  "localPortsInUse": {
+    "avg": 520.5,
+    "max": 646
+  },
+  "startLagMillis": {
+    "count": 240059,
+    "p50": 0,
+    "p99": 62,
+    "p999": 260,
+    "max": 446
+  },
+  "appThrottledMillisTotal": 1.6,
+  "appThrottledMillisMaxPer5s": 1.6,
+  "platformThreadsMax": 19,
+  "gcPauseMaxMillis": 22,
+  "hostLoad1": {
+    "avg": 3.4,
+    "max": 5.44
+  },
+  "verdict": {
+    "completedWithin2Percent": true,
+    "lateBelow0.1Percent": true,
+    "noUnexpectedErrors": true,
+    "heapStable": true,
+    "keepsUp": true
+  }
+}
+[c3-target-http2-jdk] written results/c3-target-http2-jdk.json

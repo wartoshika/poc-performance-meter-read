@@ -1,0 +1,88 @@
+[s4-stress-3000] building the app image and resetting the stack
+[s4-stress-3000] app up: 3000/s quarkus HTTP_2, ramp-up 60 s
+[s4-stress-3000] ramp-up done, measuring for 600 s
+[s4-stress-3000] t=60s completed/s=2996.7 open=3253 late=0 unexpected=0 cpu app=156.8% wm=196.9% estab=64 tw=0 load=8.84
+[s4-stress-3000] t=120s completed/s=2998.4 open=3248 late=0 unexpected=0 cpu app=154.6% wm=176.7% estab=64 tw=13 load=8.83
+[s4-stress-3000] t=180s completed/s=2999.1 open=3217 late=0 unexpected=0 cpu app=179.7% wm=216.4% estab=29 tw=31 load=10.86
+[s4-stress-3000] t=240s completed/s=2999.2 open=3252 late=0 unexpected=0 cpu app=181.2% wm=229.8% estab=64 tw=0 load=10.04
+[s4-stress-3000] t=300s completed/s=2999.4 open=3225 late=0 unexpected=0 cpu app=159.3% wm=184.5% estab=30 tw=31 load=11.48
+[s4-stress-3000] t=360s completed/s=2999.1 open=3391 late=0 unexpected=0 cpu app=177.3% wm=209.0% estab=29 tw=1 load=9.56
+[s4-stress-3000] t=420s completed/s=2999.5 open=3246 late=0 unexpected=0 cpu app=155.9% wm=181.0% estab=27 tw=2 load=7.55
+[s4-stress-3000] t=480s completed/s=2999.6 open=3247 late=0 unexpected=0 cpu app=145.7% wm=186.1% estab=44 tw=0 load=8.58
+[s4-stress-3000] t=540s completed/s=2999.6 open=3269 late=0 unexpected=0 cpu app=172.1% wm=221.7% estab=32 tw=5 load=10.22
+[s4-stress-3000] t=600s completed/s=2999.6 open=3301 late=0 unexpected=0 cpu app=162.7% wm=196.3% estab=30 tw=2 load=10.67
+{
+  "targetRate": 3000.0,
+  "completedPerSecond": 2999.53,
+  "startedPerSecond": 3000.0,
+  "latencyOkMillis": {
+    "count": 1773741,
+    "p50": 153.983,
+    "p95": 5091.327,
+    "p99": 9027.583,
+    "max": 10543.103
+  },
+  "latencyAllMillis": {
+    "count": 1800684,
+    "p50": 154.239,
+    "p95": 5513.215,
+    "p99": 9510.911,
+    "max": 30375.935
+  },
+  "openMax": 4873,
+  "latePercent": 0.0,
+  "deferred": 0,
+  "unexpectedErrorPercent": 0.0,
+  "unexpectedByOutcome": {},
+  "responsesByHttpVersion": {
+    "HTTP_2": 1791729
+  },
+  "poolPendingMax": 0,
+  "injectedPercent": 1.495,
+  "cpuPercentApp": {
+    "avg": 167.1,
+    "max": 199.4
+  },
+  "cpuPercentWiremock": {
+    "avg": 200.8,
+    "max": 244.2
+  },
+  "cpuPercentPostgres": null,
+  "heapUsedMaxMiB": 415.7,
+  "heapFloorSlopeMiBPerMinute": 1.5870825102834991,
+  "establishedConnections": {
+    "avg": 41.7,
+    "max": 64
+  },
+  "timeWait": {
+    "avg": 8.7,
+    "max": 31
+  },
+  "localPortsInUse": {
+    "avg": 50.4,
+    "max": 95
+  },
+  "startLagMillis": {
+    "count": 1800932,
+    "p50": 0,
+    "p99": 46,
+    "p999": 212,
+    "max": 399
+  },
+  "appThrottledMillisTotal": 57477.9,
+  "appThrottledMillisMaxPer5s": 8661.5,
+  "platformThreadsMax": 62,
+  "gcPauseMaxMillis": 128,
+  "hostLoad1": {
+    "avg": 9.9,
+    "max": 12.57
+  },
+  "verdict": {
+    "completedWithin2Percent": true,
+    "lateBelow0.1Percent": true,
+    "noUnexpectedErrors": true,
+    "heapStable": true,
+    "keepsUp": true
+  }
+}
+[s4-stress-3000] written results/s4-stress-3000.json

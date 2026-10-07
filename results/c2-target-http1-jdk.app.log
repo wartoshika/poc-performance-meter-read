@@ -1,0 +1,5 @@
+app-1  | 2026-10-06 21:08:55,812 INFO  [poc.MeterReader] (main) HTTP client: jdk HTTP_1_1 maxConnections=4000 http2MaxConnections=n/a timeout=30s maxResponseBytes=16384 target=http://wiremock:8080
+app-1  | 2026-10-06 21:08:55,945 INFO  [poc.ReadScheduler] (main) scheduler: 360000 meters, interval 900 s => 400.0 reads/s, limit 400/s, ramp-up 60 s
+app-1  | 2026-10-06 21:08:56,059 INFO  [io.quarkus] (main) meter-read-poc 1.0.0 on JVM (powered by Quarkus 3.40.1) started in 2.331s. Listening on: http://0.0.0.0:8080
+app-1  | 2026-10-06 21:08:56,060 INFO  [io.quarkus] (main) Profile prod activated. 
+app-1  | 2026-10-06 21:08:56,060 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, jdbc-postgresql, kotlin, micrometer, narayana-jta, rest, rest-client, rest-jackson, smallrye-context-propagation, vertx]

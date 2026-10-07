@@ -1,0 +1,90 @@
+[t2-target-http1-timeout10] building the app image and resetting the stack
+[t2-target-http1-timeout10] app up: 400/s quarkus HTTP_1_1, ramp-up 60 s
+[t2-target-http1-timeout10] ramp-up done, measuring for 600 s
+[t2-target-http1-timeout10] t=60s completed/s=399.7 open=398 late=0 unexpected=0 cpu app=33.4% wm=33.3% estab=429 tw=0 load=2.67
+[t2-target-http1-timeout10] t=120s completed/s=399.9 open=388 late=0 unexpected=2 cpu app=34.2% wm=28.2% estab=445 tw=1 load=1.93
+[t2-target-http1-timeout10] t=180s completed/s=399.9 open=395 late=0 unexpected=3 cpu app=33.1% wm=28.0% estab=433 tw=1 load=3.81
+[t2-target-http1-timeout10] t=240s completed/s=399.9 open=396 late=0 unexpected=4 cpu app=33.6% wm=26.6% estab=425 tw=1 load=2.08
+[t2-target-http1-timeout10] t=300s completed/s=400.0 open=379 late=0 unexpected=4 cpu app=33.1% wm=25.7% estab=421 tw=0 load=2.56
+[t2-target-http1-timeout10] t=360s completed/s=400.0 open=388 late=0 unexpected=4 cpu app=38.3% wm=30.9% estab=401 tw=0 load=2.45
+[t2-target-http1-timeout10] t=420s completed/s=400.0 open=398 late=0 unexpected=5 cpu app=35.9% wm=26.7% estab=406 tw=0 load=2.31
+[t2-target-http1-timeout10] t=480s completed/s=400.0 open=378 late=0 unexpected=5 cpu app=33.6% wm=27.9% estab=431 tw=0 load=3.15
+[t2-target-http1-timeout10] t=540s completed/s=400.0 open=405 late=0 unexpected=5 cpu app=34.1% wm=29.1% estab=439 tw=0 load=7.16
+[t2-target-http1-timeout10] t=600s completed/s=400.0 open=396 late=0 unexpected=6 cpu app=32.1% wm=27.3% estab=481 tw=0 load=5.28
+{
+  "targetRate": 400.0,
+  "completedPerSecond": 399.96,
+  "startedPerSecond": 400.0,
+  "latencyOkMillis": {
+    "count": 236426,
+    "p50": 148.607,
+    "p95": 5083.135,
+    "p99": 9027.583,
+    "max": 10018.815
+  },
+  "latencyAllMillis": {
+    "count": 240031,
+    "p50": 148.863,
+    "p95": 5492.735,
+    "p99": 9502.719,
+    "max": 10256.383
+  },
+  "openMax": 572,
+  "latePercent": 0.0,
+  "deferred": 0,
+  "unexpectedErrorPercent": 0.0025,
+  "unexpectedByOutcome": {
+    "timeout": 6
+  },
+  "responsesByHttpVersion": {
+    "HTTP_1_1": 238824
+  },
+  "poolPendingMax": 0,
+  "injectedPercent": 1.499,
+  "cpuPercentApp": {
+    "avg": 36.1,
+    "max": 64.5
+  },
+  "cpuPercentWiremock": {
+    "avg": 28.4,
+    "max": 37.0
+  },
+  "cpuPercentPostgres": null,
+  "heapUsedMaxMiB": 65.5,
+  "heapFloorSlopeMiBPerMinute": -0.0709191640218099,
+  "establishedConnections": {
+    "avg": 435.1,
+    "max": 518
+  },
+  "timeWait": {
+    "avg": 0.3,
+    "max": 2
+  },
+  "localPortsInUse": {
+    "avg": 504.8,
+    "max": 589
+  },
+  "startLagMillis": {
+    "count": 240054,
+    "p50": 0,
+    "p99": 67,
+    "p999": 241,
+    "max": 435
+  },
+  "appThrottledMillisTotal": 40.5,
+  "appThrottledMillisMaxPer5s": 37.9,
+  "platformThreadsMax": 32,
+  "gcPauseMaxMillis": 18,
+  "hostLoad1": {
+    "avg": 3.3,
+    "max": 7.52
+  },
+  "verdict": {
+    "completedWithin2Percent": true,
+    "lateBelow0.1Percent": true,
+    "noUnexpectedErrors": false,
+    "heapStable": true,
+    "keepsUp": false
+  }
+}
+[t2-target-http1-timeout10] written results/t2-target-http1-timeout10.json

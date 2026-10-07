@@ -1,0 +1,91 @@
+[s5-db-HTTP_2] building the app image and resetting the stack
+[s5-db-HTTP_2] app up: 400/s quarkus HTTP_2, ramp-up 60 s
+[s5-db-HTTP_2] ramp-up done, measuring for 600 s
+[s5-db-HTTP_2] t=60s completed/s=399.7 open=434 late=0 unexpected=0 cpu app=63.0% wm=39.1% estab=4 tw=0 load=5.01
+[s5-db-HTTP_2] t=120s completed/s=399.9 open=435 late=0 unexpected=0 cpu app=44.3% wm=31.2% estab=64 tw=0 load=5.29
+[s5-db-HTTP_2] t=180s completed/s=399.9 open=429 late=0 unexpected=0 cpu app=52.4% wm=38.9% estab=5 tw=48 load=3.21
+[s5-db-HTTP_2] t=240s completed/s=399.9 open=441 late=0 unexpected=0 cpu app=54.8% wm=41.7% estab=64 tw=0 load=4.24
+[s5-db-HTTP_2] t=300s completed/s=399.9 open=433 late=0 unexpected=0 cpu app=51.4% wm=35.5% estab=7 tw=52 load=4.82
+[s5-db-HTTP_2] t=360s completed/s=400.0 open=428 late=0 unexpected=0 cpu app=43.0% wm=29.4% estab=4 tw=3 load=4.6
+[s5-db-HTTP_2] t=420s completed/s=400.0 open=436 late=0 unexpected=0 cpu app=52.2% wm=32.7% estab=4 tw=0 load=3.66
+[s5-db-HTTP_2] t=480s completed/s=400.0 open=427 late=0 unexpected=0 cpu app=46.3% wm=29.4% estab=4 tw=0 load=3.0
+[s5-db-HTTP_2] t=540s completed/s=400.0 open=429 late=0 unexpected=0 cpu app=47.6% wm=32.8% estab=4 tw=0 load=6.42
+[s5-db-HTTP_2] t=600s completed/s=400.0 open=439 late=0 unexpected=0 cpu app=41.8% wm=30.3% estab=4 tw=0 load=4.04
+{
+  "targetRate": 400.0,
+  "completedPerSecond": 399.96,
+  "startedPerSecond": 400.0,
+  "latencyOkMillis": {
+    "count": 236446,
+    "p50": 148.863,
+    "p95": 5083.135,
+    "p99": 9011.199,
+    "max": 10371.071
+  },
+  "latencyAllMillis": {
+    "count": 240039,
+    "p50": 149.119,
+    "p95": 5500.927,
+    "p99": 9494.527,
+    "max": 30228.479
+  },
+  "openMax": 739,
+  "latePercent": 0.0,
+  "deferred": 0,
+  "unexpectedErrorPercent": 0.0,
+  "unexpectedByOutcome": {},
+  "responsesByHttpVersion": {
+    "HTTP_2": 238847
+  },
+  "poolPendingMax": 0,
+  "injectedPercent": 1.495,
+  "cpuPercentApp": {
+    "avg": 47.8,
+    "max": 110.0
+  },
+  "cpuPercentWiremock": {
+    "avg": 32.9,
+    "max": 44.1
+  },
+  "cpuPercentPostgres": {
+    "avg": 17.5,
+    "max": 25.1
+  },
+  "heapUsedMaxMiB": 78.9,
+  "heapFloorSlopeMiBPerMinute": -0.05413831075032552,
+  "establishedConnections": {
+    "avg": 16.7,
+    "max": 64
+  },
+  "timeWait": {
+    "avg": 10.5,
+    "max": 54
+  },
+  "localPortsInUse": {
+    "avg": 27.3,
+    "max": 64
+  },
+  "startLagMillis": {
+    "count": 240062,
+    "p50": 0,
+    "p99": 37,
+    "p999": 339,
+    "max": 736
+  },
+  "appThrottledMillisTotal": 319.5,
+  "appThrottledMillisMaxPer5s": 174.4,
+  "platformThreadsMax": 33,
+  "gcPauseMaxMillis": 26,
+  "hostLoad1": {
+    "avg": 4.5,
+    "max": 6.89
+  },
+  "verdict": {
+    "completedWithin2Percent": true,
+    "lateBelow0.1Percent": true,
+    "noUnexpectedErrors": true,
+    "heapStable": true,
+    "keepsUp": true
+  }
+}
+[s5-db-HTTP_2] written results/s5-db-HTTP_2.json

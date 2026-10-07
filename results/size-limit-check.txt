@@ -1,0 +1,2 @@
+quarkus: {'ok': 0, 'http_503': 0, 'http_other': 0, 'timeout': 0, 'connect_error': 0, 'too_large': 326, 'invalid_body': 0, 'io_error': 0}
+jdk: {'ok': 0, 'http_503': 0, 'http_other': 0, 'timeout': 0, 'connect_error': 0, 'too_large': 326, 'invalid_body': 0, 'io_error': 0}

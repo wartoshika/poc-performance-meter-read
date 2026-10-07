@@ -1,0 +1,32 @@
+                                                      version                                                       
+--------------------------------------------------------------------------------------------------------------------
+ PostgreSQL 18.6 (Debian 18.6-1.pgdg13+2) on x86_64-pc-linux-gnu, compiled by gcc (Debian 14.2.0-19) 14.2.0, 64-bit
+(1 row)
+INSERT 0 0
+  rows  | distinct_keys 
+--------+---------------
+ 256856 |        256856
+(1 row)
+                                            Partitioned table "public.meter_reading"
+    Column     |           Type           | Collation | Nullable | Default | Storage  | Compression | Stats target | Description 
+---------------+--------------------------+-----------+----------+---------+----------+-------------+--------------+-------------
+ meter_id      | text                     |           | not null |         | extended |             |              | 
+ due_at        | timestamp with time zone |           | not null |         | plain    |             |              | 
+ reading_value | numeric(14,3)            |           | not null |         | main     |             |              | 
+ reading_at    | timestamp with time zone |           | not null |         | plain    |             |              | 
+ status_code   | text                     |           | not null |         | extended |             |              | 
+ stored_at     | timestamp with time zone |           | not null | now()   | plain    |             |              | 
+Partition key: RANGE (due_at)
+Indexes:
+    "meter_reading_pk" PRIMARY KEY, btree (meter_id, due_at)
+Not-null constraints:
+    "meter_reading_meter_id_not_null" NOT NULL "meter_id"
+    "meter_reading_due_at_not_null" NOT NULL "due_at"
+    "meter_reading_reading_value_not_null" NOT NULL "reading_value"
+    "meter_reading_reading_at_not_null" NOT NULL "reading_at"
+    "meter_reading_status_code_not_null" NOT NULL "status_code"
+    "meter_reading_stored_at_not_null" NOT NULL "stored_at"
+Partitions: meter_reading_y2026m09 FOR VALUES FROM ('2026-09-01 00:00:00+00') TO ('2026-10-01 00:00:00+00'),
+            meter_reading_y2026m10 FOR VALUES FROM ('2026-10-01 00:00:00+00') TO ('2026-11-01 00:00:00+00'),
+            meter_reading_y2026m11 FOR VALUES FROM ('2026-11-01 00:00:00+00') TO ('2026-12-01 00:00:00+00'),
+            meter_reading_y2026m12 FOR VALUES FROM ('2026-12-01 00:00:00+00') TO ('2027-01-01 00:00:00+00')

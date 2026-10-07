@@ -1,0 +1,2860 @@
+{
+  "name": "s2-target-http1",
+  "args": {
+    "name": "s2-target-http1",
+    "profile": "full",
+    "http_version": "HTTP_1_1",
+    "rate": 400,
+    "rate_limit": null,
+    "client": "quarkus",
+    "max_connections": 4000,
+    "http2_max_connections": 64,
+    "db": false,
+    "ramp": 60,
+    "duration": 600,
+    "wiremock_cpus": "4"
+  },
+  "config": {
+    "meterCount": 360000,
+    "intervalSeconds": 900,
+    "targetRate": 400.0,
+    "rateLimit": 400,
+    "rampUpSeconds": 60,
+    "targetUrl": "http://wiremock:8080",
+    "client": "quarkus",
+    "httpVersion": "HTTP_1_1",
+    "http2MaxConnections": 64,
+    "maxConnections": 4000,
+    "timeoutSeconds": 30,
+    "maxResponseBytes": 16384,
+    "dbEnabled": false,
+    "javaVersion": "25.0.4.1",
+    "javaVmVersion": "25.0.4.1+1-LTS",
+    "kotlinVersion": "2.4.20",
+    "quarkusVersion": "3.40.1",
+    "jvmArgs": [
+      "-XX:+UseG1GC",
+      "-XX:MaxRAMPercentage=75",
+      "-XX:+ExitOnOutOfMemoryError"
+    ]
+  },
+  "summary": {
+    "targetRate": 400.0,
+    "completedPerSecond": 399.91,
+    "startedPerSecond": 400.0,
+    "latencyOkMillis": {
+      "count": 236418,
+      "p50": 147.711,
+      "p95": 5070.847,
+      "p99": 9019.391,
+      "max": 10018.815
+    },
+    "latencyAllMillis": {
+      "count": 240003,
+      "p50": 147.967,
+      "p95": 5476.351,
+      "p99": 9494.527,
+      "max": 30064.639
+    },
+    "openMax": 492,
+    "latePercent": 0.0,
+    "deferred": 0,
+    "unexpectedErrorPercent": 0.0,
+    "unexpectedByOutcome": {},
+    "responsesByHttpVersion": {
+      "HTTP_1_1": 238816
+    },
+    "poolPendingMax": 0,
+    "injectedPercent": 1.493,
+    "cpuPercentApp": {
+      "avg": 36.4,
+      "max": 72.0
+    },
+    "cpuPercentWiremock": {
+      "avg": 27.7,
+      "max": 33.3
+    },
+    "cpuPercentPostgres": null,
+    "heapUsedMaxMiB": 72.4,
+    "heapFloorSlopeMiBPerMinute": 0.11065228780110677,
+    "establishedConnections": {
+      "avg": 447.6,
+      "max": 471
+    },
+    "timeWait": {
+      "avg": 0.0,
+      "max": 0
+    },
+    "localPortsInUse": {
+      "avg": 477.1,
+      "max": 499
+    },
+    "platformThreadsMax": 31,
+    "gcPauseMaxMillis": 28,
+    "hostLoad1": {
+      "avg": 3.7,
+      "max": 5.46
+    },
+    "verdict": {
+      "completedWithin2Percent": true,
+      "lateBelow0.1Percent": true,
+      "noUnexpectedErrors": true,
+      "heapStable": true,
+      "keepsUp": true
+    }
+  },
+  "window": {
+    "windowStartEpochMillis": 1791311531220,
+    "windowSeconds": 600.137817781,
+    "started": 240058,
+    "startedPerSecond": 400.00478704643314,
+    "completed": 239999,
+    "completedPerSecond": 399.9064762947159,
+    "completedByOutcome": {
+      "ok": 236416,
+      "http_503": 2400,
+      "http_other": 0,
+      "timeout": 1183,
+      "connect_error": 0,
+      "too_large": 0,
+      "invalid_body": 0,
+      "io_error": 0
+    },
+    "injectedByOutcome": {
+      "http_503": 2400,
+      "timeout": 1183
+    },
+    "unexpectedErrors": 0,
+    "unexpectedByOutcome": {},
+    "responsesByHttpVersion": {
+      "HTTP_1_1": 238816
+    },
+    "deferred": 0,
+    "late": 0,
+    "skippedRampUp": 0,
+    "openNow": 456,
+    "openMax": 492,
+    "poolInUseMax": 492,
+    "poolPendingMax": 0,
+    "latencyOkMillis": {
+      "count": 236418,
+      "p50": 147.711,
+      "p95": 5070.847,
+      "p99": 9019.391,
+      "max": 10018.815
+    },
+    "latencyAllMillis": {
+      "count": 240003,
+      "p50": 147.967,
+      "p95": 5476.351,
+      "p99": 9494.527,
+      "max": 30064.639
+    },
+    "startLagMillis": {
+      "count": 240059,
+      "p50": 1,
+      "p99": 21,
+      "p999": 61,
+      "max": 101
+    },
+    "heapUsedMaxBytes": 75965216,
+    "heapCommittedMaxBytes": 85983232,
+    "heapMaxBytes": 1610612736,
+    "heapFloorPerMinuteMiB": [
+      25.409637451171875,
+      25.693984985351562,
+      27.146240234375,
+      28.610923767089844,
+      26.65776824951172,
+      27.605079650878906,
+      29.062904357910156,
+      26.498023986816406,
+      25.759521484375
+    ],
+    "heapFloorSlopeMiBPerMinute": 0.11065228780110677,
+    "platformThreadsMax": 31,
+    "gcPauseCount": 344,
+    "gcPauseTotalMillis": 2142,
+    "gcPauseMaxMillis": 28,
+    "gc": [
+      "G1 Young Generation",
+      "G1 Concurrent GC",
+      "G1 Old Generation"
+    ],
+    "availableProcessors": 2,
+    "db": {
+      "ok": 0,
+      "duplicate": 0,
+      "error": 0,
+      "latencyMillis": {
+        "count": 0,
+        "p50": 0.0,
+        "p95": 0.0,
+        "p99": 0.0,
+        "max": 0.0
+      }
+    }
+  },
+  "checks": {
+    "ssSummary": "Total: 464\nTCP:   1090 (estab 457, closed 631, orphaned 0, timewait 44)\n\nTransport Total     IP        IPv6\nRAW\t  0         0         0        \nUDP\t  1         1         0        \nTCP\t  459       1         458      \nINET\t  460       2         458      \nFRAG\t  0         0         0        \n\n",
+    "appUlimitSoft": "1024",
+    "appJvmOpenFilesLimit": "Max open files 524288 524288 files",
+    "appOpenFds": 491,
+    "wiremockJvmOpenFilesLimit": "Max open files 524288 524288 files",
+    "ephemeralPortRange": [
+      "32768",
+      "60999"
+    ],
+    "tcpFinTimeout": "60"
+  },
+  "samples": [
+    {
+      "t": 5.0,
+      "cpuPercent": {
+        "wiremock": 31.2,
+        "app": 69.2
+      },
+      "memBytes": {
+        "wiremock": 982507520,
+        "app": 194285568
+      },
+      "sockets": {
+        "ESTAB": 442,
+        "FIN-WAIT-2": 15,
+        "local_ports_in_use": 457
+      },
+      "openNow": 417,
+      "started": 2012,
+      "completed": 1991,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.7
+    },
+    {
+      "t": 10.0,
+      "cpuPercent": {
+        "wiremock": 28.7,
+        "app": 59.6
+      },
+      "memBytes": {
+        "wiremock": 982593536,
+        "app": 196976640
+      },
+      "sockets": {
+        "ESTAB": 459,
+        "FIN-WAIT-2": 13,
+        "local_ports_in_use": 472
+      },
+      "openNow": 436,
+      "started": 4007,
+      "completed": 3968,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.4
+    },
+    {
+      "t": 15.0,
+      "cpuPercent": {
+        "wiremock": 30.5,
+        "app": 50.2
+      },
+      "memBytes": {
+        "wiremock": 984354816,
+        "app": 197242880
+      },
+      "sockets": {
+        "ESTAB": 452,
+        "FIN-WAIT-2": 14,
+        "local_ports_in_use": 466
+      },
+      "openNow": 432,
+      "started": 6005,
+      "completed": 5970,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.13
+    },
+    {
+      "t": 20.0,
+      "cpuPercent": {
+        "wiremock": 30.6,
+        "app": 72.0
+      },
+      "memBytes": {
+        "wiremock": 1106477056,
+        "app": 200171520
+      },
+      "sockets": {
+        "ESTAB": 443,
+        "FIN-WAIT-2": 20,
+        "local_ports_in_use": 463
+      },
+      "openNow": 431,
+      "started": 8008,
+      "completed": 7974,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.88
+    },
+    {
+      "t": 25.0,
+      "cpuPercent": {
+        "wiremock": 28.4,
+        "app": 52.1
+      },
+      "memBytes": {
+        "wiremock": 1160372224,
+        "app": 201707520
+      },
+      "sockets": {
+        "ESTAB": 441,
+        "FIN-WAIT-2": 26,
+        "local_ports_in_use": 467
+      },
+      "openNow": 424,
+      "started": 10004,
+      "completed": 9977,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.73
+    },
+    {
+      "t": 30.0,
+      "cpuPercent": {
+        "wiremock": 30.6,
+        "app": 40.4
+      },
+      "memBytes": {
+        "wiremock": 1161007104,
+        "app": 202395648
+      },
+      "sockets": {
+        "ESTAB": 434,
+        "FIN-WAIT-2": 28,
+        "local_ports_in_use": 462
+      },
+      "openNow": 415,
+      "started": 12004,
+      "completed": 11986,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.43
+    },
+    {
+      "t": 35.0,
+      "cpuPercent": {
+        "wiremock": 27.6,
+        "app": 43.6
+      },
+      "memBytes": {
+        "wiremock": 1161199616,
+        "app": 203571200
+      },
+      "sockets": {
+        "ESTAB": 451,
+        "FIN-WAIT-2": 28,
+        "local_ports_in_use": 479
+      },
+      "openNow": 442,
+      "started": 14005,
+      "completed": 13960,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.24
+    },
+    {
+      "t": 40.0,
+      "cpuPercent": {
+        "wiremock": 28.1,
+        "app": 36.9
+      },
+      "memBytes": {
+        "wiremock": 1166651392,
+        "app": 205516800
+      },
+      "sockets": {
+        "ESTAB": 450,
+        "FIN-WAIT-2": 28,
+        "local_ports_in_use": 478
+      },
+      "openNow": 434,
+      "started": 16005,
+      "completed": 15968,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.54
+    },
+    {
+      "t": 45.0,
+      "cpuPercent": {
+        "wiremock": 27.4,
+        "app": 42.4
+      },
+      "memBytes": {
+        "wiremock": 1166516224,
+        "app": 207589376
+      },
+      "sockets": {
+        "ESTAB": 448,
+        "FIN-WAIT-2": 29,
+        "FIN-WAIT-1": 1,
+        "local_ports_in_use": 478
+      },
+      "openNow": 427,
+      "started": 18004,
+      "completed": 17974,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.58
+    },
+    {
+      "t": 50.0,
+      "cpuPercent": {
+        "wiremock": 26.1,
+        "app": 36.4
+      },
+      "memBytes": {
+        "wiremock": 1166385152,
+        "app": 206958592
+      },
+      "sockets": {
+        "ESTAB": 440,
+        "FIN-WAIT-2": 32,
+        "local_ports_in_use": 472
+      },
+      "openNow": 420,
+      "started": 20005,
+      "completed": 19982,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.45
+    },
+    {
+      "t": 55.0,
+      "cpuPercent": {
+        "wiremock": 25.6,
+        "app": 36.3
+      },
+      "memBytes": {
+        "wiremock": 1166938112,
+        "app": 208834560
+      },
+      "sockets": {
+        "ESTAB": 450,
+        "FIN-WAIT-2": 32,
+        "local_ports_in_use": 482
+      },
+      "openNow": 446,
+      "started": 22003,
+      "completed": 21954,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.05
+    },
+    {
+      "t": 60.0,
+      "cpuPercent": {
+        "wiremock": 28.2,
+        "app": 34.8
+      },
+      "memBytes": {
+        "wiremock": 1169461248,
+        "app": 210489344
+      },
+      "sockets": {
+        "ESTAB": 441,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 471
+      },
+      "openNow": 415,
+      "started": 24005,
+      "completed": 23987,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.73
+    },
+    {
+      "t": 65.0,
+      "cpuPercent": {
+        "wiremock": 30.0,
+        "app": 38.9
+      },
+      "memBytes": {
+        "wiremock": 1169330176,
+        "app": 211296256
+      },
+      "sockets": {
+        "ESTAB": 439,
+        "FIN-WAIT-2": 28,
+        "local_ports_in_use": 467
+      },
+      "openNow": 421,
+      "started": 26006,
+      "completed": 25982,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 5.19
+    },
+    {
+      "t": 70.0,
+      "cpuPercent": {
+        "wiremock": 28.6,
+        "app": 36.9
+      },
+      "memBytes": {
+        "wiremock": 1169485824,
+        "app": 211886080
+      },
+      "sockets": {
+        "ESTAB": 439,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 468
+      },
+      "openNow": 418,
+      "started": 28004,
+      "completed": 27983,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.94
+    },
+    {
+      "t": 75.0,
+      "cpuPercent": {
+        "wiremock": 32.2,
+        "app": 39.8
+      },
+      "memBytes": {
+        "wiremock": 1169276928,
+        "app": 212680704
+      },
+      "sockets": {
+        "ESTAB": 447,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 477
+      },
+      "openNow": 417,
+      "started": 30003,
+      "completed": 29983,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.7
+    },
+    {
+      "t": 80.0,
+      "cpuPercent": {
+        "wiremock": 27.0,
+        "app": 33.8
+      },
+      "memBytes": {
+        "wiremock": 1172045824,
+        "app": 214290432
+      },
+      "sockets": {
+        "ESTAB": 437,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 468
+      },
+      "openNow": 420,
+      "started": 32005,
+      "completed": 31982,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.64
+    },
+    {
+      "t": 85.0,
+      "cpuPercent": {
+        "wiremock": 25.2,
+        "app": 32.8
+      },
+      "memBytes": {
+        "wiremock": 1171595264,
+        "app": 214450176
+      },
+      "sockets": {
+        "ESTAB": 441,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 471
+      },
+      "openNow": 432,
+      "started": 34006,
+      "completed": 33971,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.51
+    },
+    {
+      "t": 90.0,
+      "cpuPercent": {
+        "wiremock": 30.3,
+        "app": 37.0
+      },
+      "memBytes": {
+        "wiremock": 1172787200,
+        "app": 216825856
+      },
+      "sockets": {
+        "ESTAB": 461,
+        "FIN-WAIT-2": 29,
+        "FIN-WAIT-1": 1,
+        "local_ports_in_use": 491
+      },
+      "openNow": 441,
+      "started": 36006,
+      "completed": 35962,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.55
+    },
+    {
+      "t": 95.0,
+      "cpuPercent": {
+        "wiremock": 28.5,
+        "app": 36.3
+      },
+      "memBytes": {
+        "wiremock": 1172492288,
+        "app": 216662016
+      },
+      "sockets": {
+        "ESTAB": 451,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 481
+      },
+      "openNow": 435,
+      "started": 38006,
+      "completed": 37968,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.59
+    },
+    {
+      "t": 100.0,
+      "cpuPercent": {
+        "wiremock": 28.4,
+        "app": 36.3
+      },
+      "memBytes": {
+        "wiremock": 1175703552,
+        "app": 217296896
+      },
+      "sockets": {
+        "ESTAB": 445,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 475
+      },
+      "openNow": 431,
+      "started": 40006,
+      "completed": 39971,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.86
+    },
+    {
+      "t": 105.0,
+      "cpuPercent": {
+        "wiremock": 29.6,
+        "app": 37.6
+      },
+      "memBytes": {
+        "wiremock": 1175994368,
+        "app": 218816512
+      },
+      "sockets": {
+        "ESTAB": 457,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 486
+      },
+      "openNow": 435,
+      "started": 42004,
+      "completed": 41966,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.63
+    },
+    {
+      "t": 110.0,
+      "cpuPercent": {
+        "wiremock": 26.9,
+        "app": 36.2
+      },
+      "memBytes": {
+        "wiremock": 1175564288,
+        "app": 220250112
+      },
+      "sockets": {
+        "ESTAB": 447,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 476
+      },
+      "openNow": 434,
+      "started": 44005,
+      "completed": 43968,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 5.46
+    },
+    {
+      "t": 115.0,
+      "cpuPercent": {
+        "wiremock": 27.0,
+        "app": 36.0
+      },
+      "memBytes": {
+        "wiremock": 1175171072,
+        "app": 220479488
+      },
+      "sockets": {
+        "ESTAB": 440,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 471
+      },
+      "openNow": 418,
+      "started": 46007,
+      "completed": 45986,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 5.35
+    },
+    {
+      "t": 120.0,
+      "cpuPercent": {
+        "wiremock": 28.8,
+        "app": 37.1
+      },
+      "memBytes": {
+        "wiremock": 1177894912,
+        "app": 220606464
+      },
+      "sockets": {
+        "ESTAB": 449,
+        "FIN-WAIT-2": 32,
+        "local_ports_in_use": 481
+      },
+      "openNow": 421,
+      "started": 48005,
+      "completed": 47981,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.92
+    },
+    {
+      "t": 125.0,
+      "cpuPercent": {
+        "wiremock": 28.7,
+        "app": 35.8
+      },
+      "memBytes": {
+        "wiremock": 1178275840,
+        "app": 221626368
+      },
+      "sockets": {
+        "ESTAB": 449,
+        "FIN-WAIT-2": 32,
+        "local_ports_in_use": 481
+      },
+      "openNow": 432,
+      "started": 50004,
+      "completed": 49970,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.84
+    },
+    {
+      "t": 130.0,
+      "cpuPercent": {
+        "wiremock": 26.4,
+        "app": 34.2
+      },
+      "memBytes": {
+        "wiremock": 1178062848,
+        "app": 222330880
+      },
+      "sockets": {
+        "ESTAB": 458,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 487
+      },
+      "openNow": 433,
+      "started": 52004,
+      "completed": 51968,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.46
+    },
+    {
+      "t": 135.0,
+      "cpuPercent": {
+        "wiremock": 26.2,
+        "app": 34.8
+      },
+      "memBytes": {
+        "wiremock": 1178386432,
+        "app": 223072256
+      },
+      "sockets": {
+        "ESTAB": 450,
+        "FIN-WAIT-2": 28,
+        "local_ports_in_use": 478
+      },
+      "openNow": 431,
+      "started": 54005,
+      "completed": 53971,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.34
+    },
+    {
+      "t": 140.0,
+      "cpuPercent": {
+        "wiremock": 30.8,
+        "app": 37.0
+      },
+      "memBytes": {
+        "wiremock": 1181204480,
+        "app": 222732288
+      },
+      "sockets": {
+        "ESTAB": 442,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 471
+      },
+      "openNow": 418,
+      "started": 56005,
+      "completed": 55984,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.15
+    },
+    {
+      "t": 145.0,
+      "cpuPercent": {
+        "wiremock": 29.2,
+        "app": 37.5
+      },
+      "memBytes": {
+        "wiremock": 1181847552,
+        "app": 222941184
+      },
+      "sockets": {
+        "ESTAB": 449,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 480
+      },
+      "openNow": 437,
+      "started": 58005,
+      "completed": 57965,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.9
+    },
+    {
+      "t": 150.0,
+      "cpuPercent": {
+        "wiremock": 30.3,
+        "app": 36.3
+      },
+      "memBytes": {
+        "wiremock": 1181392896,
+        "app": 224227328
+      },
+      "sockets": {
+        "ESTAB": 448,
+        "FIN-WAIT-2": 32,
+        "local_ports_in_use": 480
+      },
+      "openNow": 441,
+      "started": 60006,
+      "completed": 59962,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.59
+    },
+    {
+      "t": 155.0,
+      "cpuPercent": {
+        "wiremock": 29.7,
+        "app": 36.8
+      },
+      "memBytes": {
+        "wiremock": 1183354880,
+        "app": 224661504
+      },
+      "sockets": {
+        "ESTAB": 453,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 484
+      },
+      "openNow": 423,
+      "started": 62004,
+      "completed": 61978,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.46
+    },
+    {
+      "t": 160.0,
+      "cpuPercent": {
+        "wiremock": 26.3,
+        "app": 33.8
+      },
+      "memBytes": {
+        "wiremock": 1183993856,
+        "app": 225185792
+      },
+      "sockets": {
+        "ESTAB": 453,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 482
+      },
+      "openNow": 444,
+      "started": 64005,
+      "completed": 63958,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.34
+    },
+    {
+      "t": 165.0,
+      "cpuPercent": {
+        "wiremock": 33.3,
+        "app": 43.8
+      },
+      "memBytes": {
+        "wiremock": 1183637504,
+        "app": 224612352
+      },
+      "sockets": {
+        "ESTAB": 453,
+        "FIN-WAIT-2": 28,
+        "FIN-WAIT-1": 1,
+        "local_ports_in_use": 482
+      },
+      "openNow": 446,
+      "started": 66005,
+      "completed": 65956,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.55
+    },
+    {
+      "t": 170.0,
+      "cpuPercent": {
+        "wiremock": 31.8,
+        "app": 42.3
+      },
+      "memBytes": {
+        "wiremock": 1183268864,
+        "app": 225251328
+      },
+      "sockets": {
+        "ESTAB": 448,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 477
+      },
+      "openNow": 444,
+      "started": 68007,
+      "completed": 67960,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.27
+    },
+    {
+      "t": 175.0,
+      "cpuPercent": {
+        "wiremock": 28.2,
+        "app": 33.5
+      },
+      "memBytes": {
+        "wiremock": 1184595968,
+        "app": 225533952
+      },
+      "sockets": {
+        "ESTAB": 446,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 476
+      },
+      "openNow": 423,
+      "started": 70005,
+      "completed": 69979,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.25
+    },
+    {
+      "t": 180.0,
+      "cpuPercent": {
+        "wiremock": 28.9,
+        "app": 37.0
+      },
+      "memBytes": {
+        "wiremock": 1184104448,
+        "app": 226234368
+      },
+      "sockets": {
+        "ESTAB": 444,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 475
+      },
+      "openNow": 436,
+      "started": 72003,
+      "completed": 71964,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.19
+    },
+    {
+      "t": 185.0,
+      "cpuPercent": {
+        "wiremock": 25.2,
+        "app": 33.5
+      },
+      "memBytes": {
+        "wiremock": 1184407552,
+        "app": 225935360
+      },
+      "sockets": {
+        "ESTAB": 444,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 474
+      },
+      "openNow": 423,
+      "started": 74005,
+      "completed": 73978,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.85
+    },
+    {
+      "t": 190.0,
+      "cpuPercent": {
+        "wiremock": 26.2,
+        "app": 35.4
+      },
+      "memBytes": {
+        "wiremock": 1184354304,
+        "app": 225857536
+      },
+      "sockets": {
+        "ESTAB": 444,
+        "FIN-WAIT-2": 30,
+        "FIN-WAIT-1": 1,
+        "local_ports_in_use": 475
+      },
+      "openNow": 442,
+      "started": 76005,
+      "completed": 75960,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.19
+    },
+    {
+      "t": 195.0,
+      "cpuPercent": {
+        "wiremock": 28.5,
+        "app": 35.4
+      },
+      "memBytes": {
+        "wiremock": 1185988608,
+        "app": 226029568
+      },
+      "sockets": {
+        "ESTAB": 442,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 472
+      },
+      "openNow": 424,
+      "started": 78004,
+      "completed": 77977,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 5.13
+    },
+    {
+      "t": 200.0,
+      "cpuPercent": {
+        "wiremock": 27.4,
+        "app": 34.2
+      },
+      "memBytes": {
+        "wiremock": 1185914880,
+        "app": 227258368
+      },
+      "sockets": {
+        "ESTAB": 436,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 466
+      },
+      "openNow": 422,
+      "started": 80006,
+      "completed": 79981,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.88
+    },
+    {
+      "t": 205.0,
+      "cpuPercent": {
+        "wiremock": 27.5,
+        "app": 34.0
+      },
+      "memBytes": {
+        "wiremock": 1185726464,
+        "app": 227020800
+      },
+      "sockets": {
+        "ESTAB": 446,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 475
+      },
+      "openNow": 430,
+      "started": 82004,
+      "completed": 81971,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.49
+    },
+    {
+      "t": 210.0,
+      "cpuPercent": {
+        "wiremock": 25.8,
+        "app": 34.8
+      },
+      "memBytes": {
+        "wiremock": 1186082816,
+        "app": 227721216
+      },
+      "sockets": {
+        "ESTAB": 447,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 477
+      },
+      "openNow": 430,
+      "started": 84005,
+      "completed": 83972,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.61
+    },
+    {
+      "t": 215.0,
+      "cpuPercent": {
+        "wiremock": 30.4,
+        "app": 36.5
+      },
+      "memBytes": {
+        "wiremock": 1187147776,
+        "app": 227250176
+      },
+      "sockets": {
+        "ESTAB": 448,
+        "FIN-WAIT-2": 30,
+        "FIN-WAIT-1": 1,
+        "local_ports_in_use": 479
+      },
+      "openNow": 431,
+      "started": 86005,
+      "completed": 85971,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.4
+    },
+    {
+      "t": 220.0,
+      "cpuPercent": {
+        "wiremock": 24.4,
+        "app": 32.7
+      },
+      "memBytes": {
+        "wiremock": 1187835904,
+        "app": 227012608
+      },
+      "sockets": {
+        "ESTAB": 449,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 479
+      },
+      "openNow": 437,
+      "started": 88004,
+      "completed": 87964,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.21
+    },
+    {
+      "t": 225.0,
+      "cpuPercent": {
+        "wiremock": 26.1,
+        "app": 32.3
+      },
+      "memBytes": {
+        "wiremock": 1187524608,
+        "app": 227278848
+      },
+      "sockets": {
+        "ESTAB": 446,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 475
+      },
+      "openNow": 426,
+      "started": 90004,
+      "completed": 89975,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.99
+    },
+    {
+      "t": 230.0,
+      "cpuPercent": {
+        "wiremock": 24.9,
+        "app": 32.5
+      },
+      "memBytes": {
+        "wiremock": 1189269504,
+        "app": 227581952
+      },
+      "sockets": {
+        "ESTAB": 451,
+        "FIN-WAIT-2": 28,
+        "local_ports_in_use": 479
+      },
+      "openNow": 431,
+      "started": 92005,
+      "completed": 91971,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.83
+    },
+    {
+      "t": 235.0,
+      "cpuPercent": {
+        "wiremock": 25.2,
+        "app": 31.6
+      },
+      "memBytes": {
+        "wiremock": 1188859904,
+        "app": 227520512
+      },
+      "sockets": {
+        "ESTAB": 441,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 470
+      },
+      "openNow": 435,
+      "started": 94004,
+      "completed": 93966,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.45
+    },
+    {
+      "t": 240.0,
+      "cpuPercent": {
+        "wiremock": 26.4,
+        "app": 33.4
+      },
+      "memBytes": {
+        "wiremock": 1188823040,
+        "app": 227790848
+      },
+      "sockets": {
+        "ESTAB": 438,
+        "FIN-WAIT-2": 32,
+        "local_ports_in_use": 470
+      },
+      "openNow": 436,
+      "started": 96005,
+      "completed": 95966,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.17
+    },
+    {
+      "t": 245.0,
+      "cpuPercent": {
+        "wiremock": 24.5,
+        "app": 30.8
+      },
+      "memBytes": {
+        "wiremock": 1188876288,
+        "app": 227430400
+      },
+      "sockets": {
+        "ESTAB": 444,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 475
+      },
+      "openNow": 436,
+      "started": 98005,
+      "completed": 97966,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.16
+    },
+    {
+      "t": 250.0,
+      "cpuPercent": {
+        "wiremock": 29.9,
+        "app": 39.0
+      },
+      "memBytes": {
+        "wiremock": 1189756928,
+        "app": 227446784
+      },
+      "sockets": {
+        "ESTAB": 442,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 471
+      },
+      "openNow": 420,
+      "started": 100007,
+      "completed": 99984,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.98
+    },
+    {
+      "t": 255.0,
+      "cpuPercent": {
+        "wiremock": 26.2,
+        "app": 33.8
+      },
+      "memBytes": {
+        "wiremock": 1189756928,
+        "app": 226852864
+      },
+      "sockets": {
+        "ESTAB": 471,
+        "FIN-WAIT-2": 28,
+        "local_ports_in_use": 499
+      },
+      "openNow": 449,
+      "started": 102008,
+      "completed": 101956,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.66
+    },
+    {
+      "t": 260.0,
+      "cpuPercent": {
+        "wiremock": 25.8,
+        "app": 34.8
+      },
+      "memBytes": {
+        "wiremock": 1190412288,
+        "app": 227479552
+      },
+      "sockets": {
+        "ESTAB": 460,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 490
+      },
+      "openNow": 442,
+      "started": 104004,
+      "completed": 103959,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.37
+    },
+    {
+      "t": 265.0,
+      "cpuPercent": {
+        "wiremock": 26.0,
+        "app": 34.7
+      },
+      "memBytes": {
+        "wiremock": 1190359040,
+        "app": 227545088
+      },
+      "sockets": {
+        "ESTAB": 458,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 489
+      },
+      "openNow": 452,
+      "started": 106004,
+      "completed": 105949,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.18
+    },
+    {
+      "t": 270.0,
+      "cpuPercent": {
+        "wiremock": 27.3,
+        "app": 33.0
+      },
+      "memBytes": {
+        "wiremock": 1194233856,
+        "app": 228499456
+      },
+      "sockets": {
+        "ESTAB": 462,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 493
+      },
+      "openNow": 438,
+      "started": 108005,
+      "completed": 107964,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.17
+    },
+    {
+      "t": 275.0,
+      "cpuPercent": {
+        "wiremock": 28.6,
+        "app": 34.9
+      },
+      "memBytes": {
+        "wiremock": 1194082304,
+        "app": 228122624
+      },
+      "sockets": {
+        "ESTAB": 453,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 482
+      },
+      "openNow": 427,
+      "started": 110004,
+      "completed": 109974,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.71
+    },
+    {
+      "t": 280.0,
+      "cpuPercent": {
+        "wiremock": 27.3,
+        "app": 34.5
+      },
+      "memBytes": {
+        "wiremock": 1194229760,
+        "app": 229203968
+      },
+      "sockets": {
+        "ESTAB": 454,
+        "FIN-WAIT-2": 28,
+        "local_ports_in_use": 482
+      },
+      "openNow": 444,
+      "started": 112004,
+      "completed": 111957,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.42
+    },
+    {
+      "t": 285.0,
+      "cpuPercent": {
+        "wiremock": 28.4,
+        "app": 34.9
+      },
+      "memBytes": {
+        "wiremock": 1194151936,
+        "app": 229380096
+      },
+      "sockets": {
+        "ESTAB": 445,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 475
+      },
+      "openNow": 424,
+      "started": 114005,
+      "completed": 113978,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.14
+    },
+    {
+      "t": 290.0,
+      "cpuPercent": {
+        "wiremock": 26.8,
+        "app": 33.3
+      },
+      "memBytes": {
+        "wiremock": 1195532288,
+        "app": 229675008
+      },
+      "sockets": {
+        "ESTAB": 435,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 466
+      },
+      "openNow": 416,
+      "started": 116005,
+      "completed": 115986,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.13
+    },
+    {
+      "t": 295.0,
+      "cpuPercent": {
+        "wiremock": 30.0,
+        "app": 38.0
+      },
+      "memBytes": {
+        "wiremock": 1196187648,
+        "app": 230252544
+      },
+      "sockets": {
+        "ESTAB": 456,
+        "FIN-WAIT-2": 32,
+        "local_ports_in_use": 488
+      },
+      "openNow": 427,
+      "started": 118005,
+      "completed": 117975,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.96
+    },
+    {
+      "t": 300.0,
+      "cpuPercent": {
+        "wiremock": 27.9,
+        "app": 34.8
+      },
+      "memBytes": {
+        "wiremock": 1195565056,
+        "app": 229568512
+      },
+      "sockets": {
+        "ESTAB": 450,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 480
+      },
+      "openNow": 447,
+      "started": 120005,
+      "completed": 119955,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.88
+    },
+    {
+      "t": 305.0,
+      "cpuPercent": {
+        "wiremock": 25.6,
+        "app": 35.1
+      },
+      "memBytes": {
+        "wiremock": 1195556864,
+        "app": 230072320
+      },
+      "sockets": {
+        "ESTAB": 450,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 479
+      },
+      "openNow": 445,
+      "started": 122006,
+      "completed": 121958,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.65
+    },
+    {
+      "t": 310.0,
+      "cpuPercent": {
+        "wiremock": 28.9,
+        "app": 36.2
+      },
+      "memBytes": {
+        "wiremock": 1198723072,
+        "app": 230371328
+      },
+      "sockets": {
+        "ESTAB": 448,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 477
+      },
+      "openNow": 434,
+      "started": 124008,
+      "completed": 123971,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.4
+    },
+    {
+      "t": 315.0,
+      "cpuPercent": {
+        "wiremock": 27.5,
+        "app": 36.0
+      },
+      "memBytes": {
+        "wiremock": 1198632960,
+        "app": 232513536
+      },
+      "sockets": {
+        "ESTAB": 454,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 483
+      },
+      "openNow": 441,
+      "started": 126004,
+      "completed": 125960,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.13
+    },
+    {
+      "t": 320.0,
+      "cpuPercent": {
+        "wiremock": 25.7,
+        "app": 32.5
+      },
+      "memBytes": {
+        "wiremock": 1199337472,
+        "app": 232075264
+      },
+      "sockets": {
+        "ESTAB": 454,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 484
+      },
+      "openNow": 418,
+      "started": 128005,
+      "completed": 127984,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.04
+    },
+    {
+      "t": 325.0,
+      "cpuPercent": {
+        "wiremock": 26.8,
+        "app": 32.4
+      },
+      "memBytes": {
+        "wiremock": 1201225728,
+        "app": 232398848
+      },
+      "sockets": {
+        "ESTAB": 463,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 493
+      },
+      "openNow": 434,
+      "started": 130004,
+      "completed": 129967,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.0
+    },
+    {
+      "t": 330.0,
+      "cpuPercent": {
+        "wiremock": 28.5,
+        "app": 36.8
+      },
+      "memBytes": {
+        "wiremock": 1201242112,
+        "app": 231280640
+      },
+      "sockets": {
+        "ESTAB": 452,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 483
+      },
+      "openNow": 428,
+      "started": 132005,
+      "completed": 131974,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.0
+    },
+    {
+      "t": 335.0,
+      "cpuPercent": {
+        "wiremock": 25.5,
+        "app": 33.1
+      },
+      "memBytes": {
+        "wiremock": 1201041408,
+        "app": 231673856
+      },
+      "sockets": {
+        "ESTAB": 453,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 484
+      },
+      "openNow": 444,
+      "started": 134007,
+      "completed": 133960,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.84
+    },
+    {
+      "t": 340.0,
+      "cpuPercent": {
+        "wiremock": 26.3,
+        "app": 35.0
+      },
+      "memBytes": {
+        "wiremock": 1201229824,
+        "app": 232226816
+      },
+      "sockets": {
+        "ESTAB": 444,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 474
+      },
+      "openNow": 435,
+      "started": 136004,
+      "completed": 135966,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.89
+    },
+    {
+      "t": 345.0,
+      "cpuPercent": {
+        "wiremock": 28.0,
+        "app": 33.0
+      },
+      "memBytes": {
+        "wiremock": 1202642944,
+        "app": 233476096
+      },
+      "sockets": {
+        "ESTAB": 440,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 469
+      },
+      "openNow": 425,
+      "started": 138005,
+      "completed": 137977,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.5
+    },
+    {
+      "t": 350.0,
+      "cpuPercent": {
+        "wiremock": 28.8,
+        "app": 37.3
+      },
+      "memBytes": {
+        "wiremock": 1202212864,
+        "app": 234016768
+      },
+      "sockets": {
+        "ESTAB": 439,
+        "FIN-WAIT-2": 28,
+        "local_ports_in_use": 467
+      },
+      "openNow": 436,
+      "started": 140004,
+      "completed": 139965,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.14
+    },
+    {
+      "t": 355.0,
+      "cpuPercent": {
+        "wiremock": 28.4,
+        "app": 35.0
+      },
+      "memBytes": {
+        "wiremock": 1202880512,
+        "app": 233598976
+      },
+      "sockets": {
+        "ESTAB": 451,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 481
+      },
+      "openNow": 435,
+      "started": 142005,
+      "completed": 141967,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.97
+    },
+    {
+      "t": 360.0,
+      "cpuPercent": {
+        "wiremock": 26.7,
+        "app": 33.4
+      },
+      "memBytes": {
+        "wiremock": 1202737152,
+        "app": 234254336
+      },
+      "sockets": {
+        "ESTAB": 447,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 478
+      },
+      "openNow": 442,
+      "started": 144006,
+      "completed": 143961,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.89
+    },
+    {
+      "t": 365.0,
+      "cpuPercent": {
+        "wiremock": 26.9,
+        "app": 33.7
+      },
+      "memBytes": {
+        "wiremock": 1204174848,
+        "app": 233668608
+      },
+      "sockets": {
+        "ESTAB": 465,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 496
+      },
+      "openNow": 434,
+      "started": 146004,
+      "completed": 145967,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.58
+    },
+    {
+      "t": 370.0,
+      "cpuPercent": {
+        "wiremock": 26.2,
+        "app": 33.4
+      },
+      "memBytes": {
+        "wiremock": 1204039680,
+        "app": 233930752
+      },
+      "sockets": {
+        "ESTAB": 455,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 485
+      },
+      "openNow": 434,
+      "started": 148005,
+      "completed": 147968,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 5.05
+    },
+    {
+      "t": 375.0,
+      "cpuPercent": {
+        "wiremock": 24.8,
+        "app": 34.0
+      },
+      "memBytes": {
+        "wiremock": 1203941376,
+        "app": 234008576
+      },
+      "sockets": {
+        "FIN-WAIT-2": 28,
+        "ESTAB": 453,
+        "local_ports_in_use": 481
+      },
+      "openNow": 437,
+      "started": 150006,
+      "completed": 149965,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.81
+    },
+    {
+      "t": 380.0,
+      "cpuPercent": {
+        "wiremock": 28.0,
+        "app": 37.6
+      },
+      "memBytes": {
+        "wiremock": 1204170752,
+        "app": 233975808
+      },
+      "sockets": {
+        "FIN-WAIT-2": 29,
+        "ESTAB": 443,
+        "local_ports_in_use": 472
+      },
+      "openNow": 419,
+      "started": 152004,
+      "completed": 151982,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.42
+    },
+    {
+      "t": 385.0,
+      "cpuPercent": {
+        "wiremock": 29.7,
+        "app": 34.9
+      },
+      "memBytes": {
+        "wiremock": 1205538816,
+        "app": 235548672
+      },
+      "sockets": {
+        "FIN-WAIT-2": 30,
+        "ESTAB": 452,
+        "local_ports_in_use": 482
+      },
+      "openNow": 431,
+      "started": 154004,
+      "completed": 153970,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.79
+    },
+    {
+      "t": 390.0,
+      "cpuPercent": {
+        "wiremock": 26.0,
+        "app": 33.0
+      },
+      "memBytes": {
+        "wiremock": 1205383168,
+        "app": 235315200
+      },
+      "sockets": {
+        "ESTAB": 445,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 476
+      },
+      "openNow": 430,
+      "started": 156004,
+      "completed": 155971,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.49
+    },
+    {
+      "t": 395.0,
+      "cpuPercent": {
+        "wiremock": 25.9,
+        "app": 32.5
+      },
+      "memBytes": {
+        "wiremock": 1205854208,
+        "app": 235122688
+      },
+      "sockets": {
+        "ESTAB": 439,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 470
+      },
+      "openNow": 426,
+      "started": 158005,
+      "completed": 157976,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.29
+    },
+    {
+      "t": 400.0,
+      "cpuPercent": {
+        "wiremock": 29.4,
+        "app": 36.2
+      },
+      "memBytes": {
+        "wiremock": 1207181312,
+        "app": 235184128
+      },
+      "sockets": {
+        "ESTAB": 440,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 470
+      },
+      "openNow": 428,
+      "started": 160004,
+      "completed": 159973,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 4.1
+    },
+    {
+      "t": 405.0,
+      "cpuPercent": {
+        "wiremock": 25.3,
+        "app": 33.5
+      },
+      "memBytes": {
+        "wiremock": 1207119872,
+        "app": 234815488
+      },
+      "sockets": {
+        "ESTAB": 432,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 462
+      },
+      "openNow": 423,
+      "started": 162006,
+      "completed": 161980,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.77
+    },
+    {
+      "t": 410.0,
+      "cpuPercent": {
+        "wiremock": 28.8,
+        "app": 36.0
+      },
+      "memBytes": {
+        "wiremock": 1207300096,
+        "app": 235012096
+      },
+      "sockets": {
+        "ESTAB": 443,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 472
+      },
+      "openNow": 427,
+      "started": 164004,
+      "completed": 163974,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.87
+    },
+    {
+      "t": 415.0,
+      "cpuPercent": {
+        "wiremock": 32.2,
+        "app": 42.3
+      },
+      "memBytes": {
+        "wiremock": 1207685120,
+        "app": 236666880
+      },
+      "sockets": {
+        "FIN-WAIT-2": 29,
+        "ESTAB": 436,
+        "local_ports_in_use": 465
+      },
+      "openNow": 428,
+      "started": 166004,
+      "completed": 165973,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.56
+    },
+    {
+      "t": 420.0,
+      "cpuPercent": {
+        "wiremock": 32.3,
+        "app": 42.8
+      },
+      "memBytes": {
+        "wiremock": 1208532992,
+        "app": 237228032
+      },
+      "sockets": {
+        "FIN-WAIT-2": 29,
+        "ESTAB": 447,
+        "local_ports_in_use": 476
+      },
+      "openNow": 425,
+      "started": 168003,
+      "completed": 167975,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.36
+    },
+    {
+      "t": 425.0,
+      "cpuPercent": {
+        "wiremock": 28.7,
+        "app": 39.4
+      },
+      "memBytes": {
+        "wiremock": 1208188928,
+        "app": 237178880
+      },
+      "sockets": {
+        "FIN-WAIT-2": 31,
+        "ESTAB": 447,
+        "FIN-WAIT-1": 1,
+        "local_ports_in_use": 479
+      },
+      "openNow": 434,
+      "started": 170004,
+      "completed": 169967,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.33
+    },
+    {
+      "t": 430.0,
+      "cpuPercent": {
+        "wiremock": 29.9,
+        "app": 38.7
+      },
+      "memBytes": {
+        "wiremock": 1209044992,
+        "app": 236879872
+      },
+      "sockets": {
+        "ESTAB": 461,
+        "FIN-WAIT-2": 32,
+        "local_ports_in_use": 493
+      },
+      "openNow": 423,
+      "started": 172007,
+      "completed": 171981,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.3
+    },
+    {
+      "t": 435.0,
+      "cpuPercent": {
+        "wiremock": 28.0,
+        "app": 35.5
+      },
+      "memBytes": {
+        "wiremock": 1208635392,
+        "app": 236924928
+      },
+      "sockets": {
+        "ESTAB": 452,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 483
+      },
+      "openNow": 424,
+      "started": 174005,
+      "completed": 173978,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.84
+    },
+    {
+      "t": 440.0,
+      "cpuPercent": {
+        "wiremock": 27.5,
+        "app": 34.2
+      },
+      "memBytes": {
+        "wiremock": 1210404864,
+        "app": 237154304
+      },
+      "sockets": {
+        "ESTAB": 458,
+        "FIN-WAIT-2": 28,
+        "local_ports_in_use": 486
+      },
+      "openNow": 428,
+      "started": 176005,
+      "completed": 175974,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.69
+    },
+    {
+      "t": 445.0,
+      "cpuPercent": {
+        "wiremock": 25.7,
+        "app": 37.4
+      },
+      "memBytes": {
+        "wiremock": 1210490880,
+        "app": 237314048
+      },
+      "sockets": {
+        "ESTAB": 451,
+        "FIN-WAIT-2": 28,
+        "local_ports_in_use": 479
+      },
+      "openNow": 428,
+      "started": 178005,
+      "completed": 177974,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.64
+    },
+    {
+      "t": 450.0,
+      "cpuPercent": {
+        "wiremock": 26.7,
+        "app": 34.0
+      },
+      "memBytes": {
+        "wiremock": 1210490880,
+        "app": 236883968
+      },
+      "sockets": {
+        "ESTAB": 468,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 498
+      },
+      "openNow": 430,
+      "started": 180006,
+      "completed": 179973,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.58
+    },
+    {
+      "t": 455.0,
+      "cpuPercent": {
+        "wiremock": 25.2,
+        "app": 34.5
+      },
+      "memBytes": {
+        "wiremock": 1210540032,
+        "app": 237015040
+      },
+      "sockets": {
+        "ESTAB": 457,
+        "FIN-WAIT-2": 32,
+        "local_ports_in_use": 489
+      },
+      "openNow": 429,
+      "started": 182005,
+      "completed": 181973,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.46
+    },
+    {
+      "t": 460.0,
+      "cpuPercent": {
+        "wiremock": 29.1,
+        "app": 34.9
+      },
+      "memBytes": {
+        "wiremock": 1211457536,
+        "app": 236658688
+      },
+      "sockets": {
+        "ESTAB": 450,
+        "FIN-WAIT-2": 32,
+        "local_ports_in_use": 482
+      },
+      "openNow": 438,
+      "started": 184009,
+      "completed": 183968,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.18
+    },
+    {
+      "t": 465.0,
+      "cpuPercent": {
+        "wiremock": 26.0,
+        "app": 33.4
+      },
+      "memBytes": {
+        "wiremock": 1212706816,
+        "app": 237510656
+      },
+      "sockets": {
+        "ESTAB": 461,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 491
+      },
+      "openNow": 428,
+      "started": 186004,
+      "completed": 185973,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.17
+    },
+    {
+      "t": 470.0,
+      "cpuPercent": {
+        "wiremock": 28.9,
+        "app": 35.4
+      },
+      "memBytes": {
+        "wiremock": 1212043264,
+        "app": 237363200
+      },
+      "sockets": {
+        "ESTAB": 451,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 480
+      },
+      "openNow": 442,
+      "started": 188005,
+      "completed": 187960,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.99
+    },
+    {
+      "t": 475.0,
+      "cpuPercent": {
+        "wiremock": 26.7,
+        "app": 32.5
+      },
+      "memBytes": {
+        "wiremock": 1213210624,
+        "app": 237060096
+      },
+      "sockets": {
+        "ESTAB": 447,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 477
+      },
+      "openNow": 424,
+      "started": 190005,
+      "completed": 189978,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.99
+    },
+    {
+      "t": 480.0,
+      "cpuPercent": {
+        "wiremock": 28.1,
+        "app": 35.3
+      },
+      "memBytes": {
+        "wiremock": 1213755392,
+        "app": 237125632
+      },
+      "sockets": {
+        "ESTAB": 450,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 481
+      },
+      "openNow": 441,
+      "started": 192005,
+      "completed": 191961,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.99
+    },
+    {
+      "t": 485.0,
+      "cpuPercent": {
+        "wiremock": 28.9,
+        "app": 36.0
+      },
+      "memBytes": {
+        "wiremock": 1212739584,
+        "app": 237436928
+      },
+      "sockets": {
+        "ESTAB": 441,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 472
+      },
+      "openNow": 432,
+      "started": 194005,
+      "completed": 193970,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.15
+    },
+    {
+      "t": 490.0,
+      "cpuPercent": {
+        "wiremock": 28.8,
+        "app": 38.3
+      },
+      "memBytes": {
+        "wiremock": 1213087744,
+        "app": 237391872
+      },
+      "sockets": {
+        "ESTAB": 438,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 468
+      },
+      "openNow": 417,
+      "started": 196004,
+      "completed": 195984,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.78
+    },
+    {
+      "t": 495.0,
+      "cpuPercent": {
+        "wiremock": 27.5,
+        "app": 35.0
+      },
+      "memBytes": {
+        "wiremock": 1215275008,
+        "app": 236568576
+      },
+      "sockets": {
+        "ESTAB": 442,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 472
+      },
+      "openNow": 431,
+      "started": 198010,
+      "completed": 197975,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.72
+    },
+    {
+      "t": 500.0,
+      "cpuPercent": {
+        "wiremock": 31.2,
+        "app": 37.9
+      },
+      "memBytes": {
+        "wiremock": 1214570496,
+        "app": 237076480
+      },
+      "sockets": {
+        "ESTAB": 439,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 469
+      },
+      "openNow": 433,
+      "started": 200004,
+      "completed": 199968,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.74
+    },
+    {
+      "t": 505.0,
+      "cpuPercent": {
+        "wiremock": 28.2,
+        "app": 34.9
+      },
+      "memBytes": {
+        "wiremock": 1215123456,
+        "app": 237690880
+      },
+      "sockets": {
+        "ESTAB": 442,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 472
+      },
+      "openNow": 428,
+      "started": 202004,
+      "completed": 201973,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.44
+    },
+    {
+      "t": 510.0,
+      "cpuPercent": {
+        "wiremock": 29.8,
+        "app": 38.4
+      },
+      "memBytes": {
+        "wiremock": 1214877696,
+        "app": 236982272
+      },
+      "sockets": {
+        "ESTAB": 448,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 478
+      },
+      "openNow": 441,
+      "started": 204006,
+      "completed": 203962,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.17
+    },
+    {
+      "t": 515.0,
+      "cpuPercent": {
+        "wiremock": 27.4,
+        "app": 34.0
+      },
+      "memBytes": {
+        "wiremock": 1216909312,
+        "app": 238755840
+      },
+      "sockets": {
+        "ESTAB": 439,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 469
+      },
+      "openNow": 424,
+      "started": 206006,
+      "completed": 205979,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.99
+    },
+    {
+      "t": 520.0,
+      "cpuPercent": {
+        "wiremock": 28.1,
+        "app": 36.8
+      },
+      "memBytes": {
+        "wiremock": 1217052672,
+        "app": 238477312
+      },
+      "sockets": {
+        "ESTAB": 439,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 470
+      },
+      "openNow": 424,
+      "started": 208006,
+      "completed": 207980,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.91
+    },
+    {
+      "t": 525.0,
+      "cpuPercent": {
+        "wiremock": 28.2,
+        "app": 37.0
+      },
+      "memBytes": {
+        "wiremock": 1216466944,
+        "app": 239194112
+      },
+      "sockets": {
+        "ESTAB": 437,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 468
+      },
+      "openNow": 422,
+      "started": 210005,
+      "completed": 209980,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.92
+    },
+    {
+      "t": 530.0,
+      "cpuPercent": {
+        "wiremock": 28.4,
+        "app": 36.7
+      },
+      "memBytes": {
+        "wiremock": 1216745472,
+        "app": 238718976
+      },
+      "sockets": {
+        "ESTAB": 439,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 470
+      },
+      "openNow": 428,
+      "started": 212005,
+      "completed": 211974,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.69
+    },
+    {
+      "t": 535.0,
+      "cpuPercent": {
+        "wiremock": 31.4,
+        "app": 36.1
+      },
+      "memBytes": {
+        "wiremock": 1217531904,
+        "app": 238911488
+      },
+      "sockets": {
+        "ESTAB": 446,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 476
+      },
+      "openNow": 434,
+      "started": 214007,
+      "completed": 213970,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.95
+    },
+    {
+      "t": 540.0,
+      "cpuPercent": {
+        "wiremock": 27.6,
+        "app": 34.9
+      },
+      "memBytes": {
+        "wiremock": 1217638400,
+        "app": 238641152
+      },
+      "sockets": {
+        "ESTAB": 455,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 484
+      },
+      "openNow": 448,
+      "started": 216004,
+      "completed": 215953,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 3.12
+    },
+    {
+      "t": 545.0,
+      "cpuPercent": {
+        "wiremock": 24.6,
+        "app": 31.8
+      },
+      "memBytes": {
+        "wiremock": 1218080768,
+        "app": 238891008
+      },
+      "sockets": {
+        "ESTAB": 460,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 490
+      },
+      "openNow": 425,
+      "started": 218006,
+      "completed": 217978,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.87
+    },
+    {
+      "t": 550.0,
+      "cpuPercent": {
+        "wiremock": 26.3,
+        "app": 33.5
+      },
+      "memBytes": {
+        "wiremock": 1220263936,
+        "app": 238518272
+      },
+      "sockets": {
+        "ESTAB": 450,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 480
+      },
+      "openNow": 436,
+      "started": 220008,
+      "completed": 219969,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.72
+    },
+    {
+      "t": 555.0,
+      "cpuPercent": {
+        "wiremock": 28.0,
+        "app": 35.4
+      },
+      "memBytes": {
+        "wiremock": 1220448256,
+        "app": 238862336
+      },
+      "sockets": {
+        "ESTAB": 450,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 480
+      },
+      "openNow": 422,
+      "started": 222005,
+      "completed": 221980,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.9
+    },
+    {
+      "t": 560.0,
+      "cpuPercent": {
+        "wiremock": 24.4,
+        "app": 31.8
+      },
+      "memBytes": {
+        "wiremock": 1220612096,
+        "app": 239001600
+      },
+      "sockets": {
+        "ESTAB": 440,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 469
+      },
+      "openNow": 432,
+      "started": 224004,
+      "completed": 223969,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.75
+    },
+    {
+      "t": 565.0,
+      "cpuPercent": {
+        "wiremock": 23.7,
+        "app": 30.6
+      },
+      "memBytes": {
+        "wiremock": 1220411392,
+        "app": 239038464
+      },
+      "sockets": {
+        "ESTAB": 444,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 473
+      },
+      "openNow": 428,
+      "started": 226004,
+      "completed": 225973,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.69
+    },
+    {
+      "t": 570.0,
+      "cpuPercent": {
+        "wiremock": 26.3,
+        "app": 31.4
+      },
+      "memBytes": {
+        "wiremock": 1221009408,
+        "app": 238784512
+      },
+      "sockets": {
+        "ESTAB": 445,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 476
+      },
+      "openNow": 431,
+      "started": 228005,
+      "completed": 227971,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.71
+    },
+    {
+      "t": 575.0,
+      "cpuPercent": {
+        "wiremock": 24.6,
+        "app": 32.1
+      },
+      "memBytes": {
+        "wiremock": 1220833280,
+        "app": 238800896
+      },
+      "sockets": {
+        "ESTAB": 435,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 466
+      },
+      "openNow": 422,
+      "started": 230004,
+      "completed": 229979,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.5
+    },
+    {
+      "t": 580.0,
+      "cpuPercent": {
+        "wiremock": 24.5,
+        "app": 31.0
+      },
+      "memBytes": {
+        "wiremock": 1221349376,
+        "app": 238669824
+      },
+      "sockets": {
+        "ESTAB": 446,
+        "FIN-WAIT-2": 31,
+        "local_ports_in_use": 477
+      },
+      "openNow": 434,
+      "started": 232006,
+      "completed": 231969,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.37
+    },
+    {
+      "t": 585.0,
+      "cpuPercent": {
+        "wiremock": 24.0,
+        "app": 31.2
+      },
+      "memBytes": {
+        "wiremock": 1220489216,
+        "app": 238546944
+      },
+      "sockets": {
+        "ESTAB": 443,
+        "FIN-WAIT-2": 29,
+        "local_ports_in_use": 472
+      },
+      "openNow": 436,
+      "started": 234005,
+      "completed": 233966,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.26
+    },
+    {
+      "t": 590.0,
+      "cpuPercent": {
+        "wiremock": 27.8,
+        "app": 33.2
+      },
+      "memBytes": {
+        "wiremock": 1222836224,
+        "app": 239083520
+      },
+      "sockets": {
+        "ESTAB": 444,
+        "FIN-WAIT-2": 29,
+        "FIN-WAIT-1": 1,
+        "local_ports_in_use": 474
+      },
+      "openNow": 439,
+      "started": 236006,
+      "completed": 235964,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.16
+    },
+    {
+      "t": 595.0,
+      "cpuPercent": {
+        "wiremock": 26.3,
+        "app": 33.2
+      },
+      "memBytes": {
+        "wiremock": 1222553600,
+        "app": 238555136
+      },
+      "sockets": {
+        "ESTAB": 443,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 473
+      },
+      "openNow": 415,
+      "started": 238005,
+      "completed": 237987,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 2.07
+    },
+    {
+      "t": 600.0,
+      "cpuPercent": {
+        "wiremock": 25.9,
+        "app": 32.7
+      },
+      "memBytes": {
+        "wiremock": 1222688768,
+        "app": 238686208
+      },
+      "sockets": {
+        "ESTAB": 456,
+        "FIN-WAIT-2": 30,
+        "local_ports_in_use": 486
+      },
+      "openNow": 446,
+      "started": 240009,
+      "completed": 239961,
+      "late": 0,
+      "unexpectedErrors": 0,
+      "hostLoad1": 1.98
+    }
+  ],
+  "startedAt": "2026-10-06T20:31:11+0200"
+}

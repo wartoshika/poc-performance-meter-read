@@ -1,0 +1,88 @@
+[s4-stress-600] building the app image and resetting the stack
+[s4-stress-600] app up: 600/s quarkus HTTP_2, ramp-up 60 s
+[s4-stress-600] ramp-up done, measuring for 600 s
+[s4-stress-600] t=60s completed/s=599.0 open=648 late=0 unexpected=0 cpu app=51.0% wm=59.2% estab=11 tw=0 load=3.9
+[s4-stress-600] t=120s completed/s=599.5 open=649 late=0 unexpected=0 cpu app=52.3% wm=60.9% estab=6 tw=0 load=3.53
+[s4-stress-600] t=180s completed/s=599.6 open=654 late=0 unexpected=0 cpu app=53.9% wm=45.0% estab=6 tw=0 load=4.98
+[s4-stress-600] t=240s completed/s=599.7 open=654 late=0 unexpected=0 cpu app=45.8% wm=41.2% estab=6 tw=0 load=4.55
+[s4-stress-600] t=300s completed/s=599.8 open=658 late=0 unexpected=0 cpu app=47.4% wm=43.3% estab=20 tw=0 load=6.5
+[s4-stress-600] t=360s completed/s=599.8 open=642 late=0 unexpected=0 cpu app=47.7% wm=43.6% estab=6 tw=9 load=8.04
+[s4-stress-600] t=420s completed/s=599.9 open=649 late=0 unexpected=0 cpu app=56.2% wm=46.2% estab=16 tw=0 load=4.97
+[s4-stress-600] t=480s completed/s=599.9 open=626 late=0 unexpected=0 cpu app=52.2% wm=44.3% estab=8 tw=8 load=3.61
+[s4-stress-600] t=540s completed/s=599.9 open=648 late=0 unexpected=0 cpu app=49.1% wm=41.3% estab=6 tw=0 load=4.74
+[s4-stress-600] t=600s completed/s=599.9 open=651 late=0 unexpected=0 cpu app=47.3% wm=52.1% estab=6 tw=0 load=3.55
+{
+  "targetRate": 600.0,
+  "completedPerSecond": 599.89,
+  "startedPerSecond": 600.0,
+  "latencyOkMillis": {
+    "count": 354638,
+    "p50": 149.119,
+    "p95": 5070.847,
+    "p99": 9027.583,
+    "max": 10493.951
+  },
+  "latencyAllMillis": {
+    "count": 360028,
+    "p50": 149.375,
+    "p95": 5496.831,
+    "p99": 9486.335,
+    "max": 30474.239
+  },
+  "openMax": 1056,
+  "latePercent": 0.0,
+  "deferred": 0,
+  "unexpectedErrorPercent": 0.0,
+  "unexpectedByOutcome": {},
+  "responsesByHttpVersion": {
+    "HTTP_2": 358237
+  },
+  "poolPendingMax": 0,
+  "injectedPercent": 1.496,
+  "cpuPercentApp": {
+    "avg": 51.1,
+    "max": 81.6
+  },
+  "cpuPercentWiremock": {
+    "avg": 43.8,
+    "max": 60.9
+  },
+  "cpuPercentPostgres": null,
+  "heapUsedMaxMiB": 97.5,
+  "heapFloorSlopeMiBPerMinute": 0.4691593170166016,
+  "establishedConnections": {
+    "avg": 9.2,
+    "max": 20
+  },
+  "timeWait": {
+    "avg": 1.7,
+    "max": 9
+  },
+  "localPortsInUse": {
+    "avg": 11.0,
+    "max": 20
+  },
+  "startLagMillis": {
+    "count": 360093,
+    "p50": 0,
+    "p99": 87,
+    "p999": 340,
+    "max": 664
+  },
+  "appThrottledMillisTotal": 45.2,
+  "appThrottledMillisMaxPer5s": 44.3,
+  "platformThreadsMax": 33,
+  "gcPauseMaxMillis": 20,
+  "hostLoad1": {
+    "avg": 5.0,
+    "max": 8.04
+  },
+  "verdict": {
+    "completedWithin2Percent": true,
+    "lateBelow0.1Percent": true,
+    "noUnexpectedErrors": true,
+    "heapStable": true,
+    "keepsUp": true
+  }
+}
+[s4-stress-600] written results/s4-stress-600.json

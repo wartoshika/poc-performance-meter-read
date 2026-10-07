@@ -1,0 +1,30 @@
+{
+  "meterNumber": "{{request.pathSegments.[1]}}",
+  "statusCode": "OK",
+  "timestamp": "{{now}}",
+  "reading": {
+    "obis": "1-0:1.8.0",
+    "value": {{randomInt lower=10000 upper=99999}}.{{randomInt lower=100 upper=999}},
+    "unit": "kWh",
+    "quality": "MEASURED"
+  },
+  "registers": [
+    { "obis": "1-0:1.8.1", "value": {{randomInt lower=1000 upper=9999}}.{{randomInt lower=100 upper=999}}, "unit": "kWh", "tariff": "T1" },
+    { "obis": "1-0:1.8.2", "value": {{randomInt lower=1000 upper=9999}}.{{randomInt lower=100 upper=999}}, "unit": "kWh", "tariff": "T2" },
+    { "obis": "1-0:2.8.0", "value": {{randomInt lower=100 upper=999}}.{{randomInt lower=100 upper=999}}, "unit": "kWh", "tariff": "TOTAL" }
+  ],
+  "device": {
+    "manufacturer": "SIMULATED",
+    "firmware": "1.4.2-sim",
+    "gatewayId": "GW-{{randomValue length=10 type='ALPHANUMERIC' uppercase=true}}",
+    "signalQuality": {{randomInt lower=1 upper=31}},
+    "lastSeen": "{{now}}"
+  },
+  "accessPoint": {
+    "operator": "simulated-metering-point-operator",
+    "requestId": "{{randomValue type='UUID'}}",
+    "processingNode": "wiremock-sim",
+    "apiVersion": "1.0"
+  },
+  "padding": "0123456789abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz0123456789abcdefghijklmnopqrstuvwxyz"
+}

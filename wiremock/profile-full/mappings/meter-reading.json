@@ -1,0 +1,113 @@
+{
+  "mappings": [
+    {
+      "name": "never answers within the 30 s timeout (0.5 %, suffix 000-004)",
+      "priority": 1,
+      "request": {
+        "method": "POST",
+        "urlPathPattern": "/meters/[A-Z0-9]*00[0-4]/reading"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "reading.json",
+        "transformers": [
+          "response-template"
+        ],
+        "fixedDelayMilliseconds": 45000
+      }
+    },
+    {
+      "name": "HTTP 503 (1 %, suffix 005-014)",
+      "priority": 2,
+      "request": {
+        "method": "POST",
+        "urlPathPattern": "/meters/[A-Z0-9]*(00[5-9]|01[0-4])/reading"
+      },
+      "response": {
+        "status": 503,
+        "headers": {
+          "Content-Type": "application/json",
+          "Retry-After": "30"
+        },
+        "body": "{\"statusCode\":\"UNAVAILABLE\",\"message\":\"access point busy\"}",
+        "delayDistribution": {
+          "type": "uniform",
+          "lower": 50,
+          "upper": 200
+        }
+      }
+    },
+    {
+      "name": "slow 5-10 s (5 %, suffix 950-999)",
+      "priority": 3,
+      "request": {
+        "method": "POST",
+        "urlPathPattern": "/meters/[A-Z0-9]*9[5-9][0-9]/reading"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "reading.json",
+        "transformers": [
+          "response-template"
+        ],
+        "delayDistribution": {
+          "type": "uniform",
+          "lower": 5000,
+          "upper": 10000
+        }
+      }
+    },
+    {
+      "name": "slow 1-5 s (15 %, suffix 800-949)",
+      "priority": 4,
+      "request": {
+        "method": "POST",
+        "urlPathPattern": "/meters/[A-Z0-9]*(8[0-9][0-9]|9[0-4][0-9])/reading"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "reading.json",
+        "transformers": [
+          "response-template"
+        ],
+        "delayDistribution": {
+          "type": "uniform",
+          "lower": 1000,
+          "upper": 5000
+        }
+      }
+    },
+    {
+      "name": "fast 50-200 ms (78.5 %, suffix 015-799)",
+      "priority": 5,
+      "request": {
+        "method": "POST",
+        "urlPathPattern": "/meters/[^/]+/reading"
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "bodyFileName": "reading.json",
+        "transformers": [
+          "response-template"
+        ],
+        "delayDistribution": {
+          "type": "uniform",
+          "lower": 50,
+          "upper": 200
+        }
+      }
+    }
+  ]
+}
