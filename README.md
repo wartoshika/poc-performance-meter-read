@@ -1,6 +1,6 @@
 # Meter reading throughput PoC
 
-> This repository has been created using AI and serves as a purpose to measure assumptions of a design concept.
+> This repository has been created using AI and serves as a purpose to measure assumptions of a design concept. The `PROMPT.md` file serves as the originating instruction.
 
 Can one service instance sustain 400 meter reads per second against one single access point
 endpoint (one host:port) while part of the reads takes up to 10 s to answer? This project
